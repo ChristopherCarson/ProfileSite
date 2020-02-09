@@ -1,149 +1,143 @@
 {
-  "main": {
-    "name":"Chris Carson",
-    "occupation":"Remote Software Engineer",
-    "description":"I was recently working on a defense contract that was cancelled early. I'm currently on the job hunt and looking to take a remote junior/internship level software engineering job with the right company.",
-    "image":"profilepic.jpg",
-    "bio":"I completed a remote internship at Moebius Solutions, which lead to full time remote employment as a React developer for 13 months. It wasn't long enough to get my experience level past Early Career, however it was long enough for me to become a profficient React developer.",
-    "contactmessage":"Please feel free to call day or night with employment oppurtunities.",
-    "email": "Email on resume",
-    "phone": "209-559-1902",
-    "address":{
-      "street":"19925 Spring Lake Road",
-      "city":"Mokelumne Hill",
-      "state":"CA",
-      "zip": "95245"
+    "main": {
+        "name": "Chris Carson",
+        "occupation": "Remote Software Engineer",
+        "description": "I was recently working on a defense contract that was cancelled early. I'm currently on the job hunt and looking to take a remote junior/internship level software engineering job with the right company.",
+        "image": "profilepic.jpg",
+        "bio": "I completed a remote internship at Moebius Solutions, which lead to full time remote employment as a React developer for 13 months. It wasn't long enough to get my experience level past Early Career, however it was long enough for me to become a profficient React developer.",
+        "contactmessage": "Please feel free to call day or night with employment oppurtunities.",
+        "email": "Email on resume",
+        "phone": "209-559-1902",
+        "address": {
+            "street": "19925 Spring Lake Road",
+            "city": "Mokelumne Hill",
+            "state": "CA",
+            "zip": "95245"
+        },
+        "website": "http://www.chriscarsondev.com",
+        "resumedownload": "https://drive.google.com/file/d/1Zh4hfIiwYELyUpWcvslIo1hteChvPEEh/view?usp=sharing",
+        "social": [
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/chris-carson-27a7a31a/",
+                "className": "fa fa-linkedin"
+            },
+            {
+                "name": "facebook",
+                "url": "https://www.facebook.com/chris.carson.1422",
+                "className": "fa fa-facebook"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/CodeBloodedChris",
+                "className": "fa fa-github"
+            },
+            {
+                "name": "stackoverflow",
+                "url": "https://stackoverflow.com/users/story/12865569",
+                "className": "fa fa-stack-overflow"
+            }
+        ]
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
-    "social":[
-      {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/chris-carson-27a7a31a/",
-        "className":"fa fa-linkedin"
-      },
-      {
-        "name":"facebook",
-        "url":"https://www.facebook.com/chris.carson.1422",
-        "className":"fa fa-facebook"
-      },
-      {
-        "name":"github",
-        "url":"https://github.com/CodeBloodedChris",
-        "className":"fa fa-github"
-      },
-      {
-        "name":"stackoverflow",
-        "url":"https://stackoverflow.com/users/story/12865569",
-        "className":"fa fa-stack-overflow"
-      }
-    ]
-  },
-  "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "education":[
-      {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2007",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      },
-      {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2003",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      }
-    ],
-    "work":[
-      {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2010 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      },
-      {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2007 - February 2010",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      }
-    ],
-    "skills":[
-      {
-        "name":"Git",
-        "level":"60%"
-      },
-      {
-        "name":"Illustrator",
-        "level":"55%"
-      },
-      {
-        "name":"ReactJs",
-        "level":"50%"
-      },
-      {
-        "name":"CSS",
-        "level":"90%"
-      },
-      {
-        "name":"HTML5",
-        "level":"80%"
-      },
-      {
-        "name":"VueJs",
-        "level":"50%"
-      },
-      {
-        "name":"MongoDB",
-        "level":"80%"
-      }
-    ]
-  },
-  "portfolio":{
-    "projects": [
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
-        "url":"https://www.canadianwanderlust.com"
-      },
-      {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"smirkspace.jpg",
-        "url":"http://www.smirkspace.com"
-      }
-    ]
-  },
-  "testimonials":{
-    "testimonials":[
-      {
-        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user":"Kareem Abdul Jabbar"
-      },
-      {
-        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user":"Steve Wozniak... impersonator"
-      }
-    ]
-  }
+    "resume": {
+        "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+        "education": [
+            {
+                "school": "California State University Monterey Bay",
+                "degree": "Bachelor's of Sceince - Software Engineering",
+                "graduated": "August 2019",
+                "description": "3.9 GPA - Received award for Most Innovative Capstone of graduating class"
+            }
+        ],
+        "work": [
+            {
+                "company": "Moebius Solutions, Inc.",
+                "title": "Remote Junior Software Engineer II",
+                "years": "January 2019 - February 2020",
+                "description": "Worked as a Full Stack developer creating a React app for the department of defense. Received my Secret Security Clearance while at this position."
+            },
+            {
+                "company": "Central Sanitary Supply",
+                "title": "Director of IT",
+                "years": "June 2012 - January 2019",
+                "description": "Oversaw the entire technical aspect of a 100+ employee, 5 branch, statewide distribution company."
+            }
+        ],
+        "skills": [
+            {
+                "name": "Git",
+                "level": "60%"
+            },
+            {
+                "name": "Illustrator",
+                "level": "55%"
+            },
+            {
+                "name": "ReactJs",
+                "level": "50%"
+            },
+            {
+                "name": "CSS",
+                "level": "90%"
+            },
+            {
+                "name": "HTML5",
+                "level": "80%"
+            },
+            {
+                "name": "VueJs",
+                "level": "50%"
+            },
+            {
+                "name": "MongoDB",
+                "level": "80%"
+            }
+        ]
+    },
+    "portfolio": {
+        "projects": [
+            {
+                "title": "Canadian Wanderlust",
+                "category": "My Travel Blog for my post-university travels",
+                "image": "canadian-wanderlust.jpg",
+                "url": "https://www.canadianwanderlust.com"
+            },
+            {
+                "title": "Fury Fighting Gear",
+                "category": "(offline now) A fighting gear company I started",
+                "image": "fury-fighting-gear.jpg",
+                "url": "http://www.timbakerdev.com"
+            },
+            {
+                "title": "Original Thai Food",
+                "category": "Website I built for a restaurant I like in Thailand",
+                "image": "original-thai-food.jpg",
+                "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+            },
+            {
+                "title": "Resume Website",
+                "category": "A React based resume website template",
+                "image": "resume-website.jpg",
+                "url": "http://www.timbakerdev.com"
+            },
+            {
+                "title": "Smirkspace",
+                "category": "(MVP Only) A React and Meteor based chat University project.",
+                "image": "smirkspace.jpg",
+                "url": "http://www.smirkspace.com"
+            }
+        ]
+    },
+    "testimonials": {
+        "testimonials": [
+            {
+                "text": "Chris impressed me. He was a cut above the average Junior Engineer. I regret not having another contract to place him on. He will certainly contribute very well in his next development job. I'm happy to be a reference for him.",
+                "user": "Douglas MacDougal - Principle Engineer, Moebius Solutions, Inc."
+            },
+            {
+                "text": "I highly recommend Chris to anyone looking for a Full Stack or React developer. He came a long way in the year that he was part of my team. I was surprized the company wasn't able to retain him.",
+                "user": "Jeffery Taylor - Technical Lead, Moebius Solutions, Inc."
+            }
+        ]
+    }
 }
