@@ -1,18 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Contact extends Component {
-  render() {
+const Contact = ({ data }) => {
+   const [name, setName] = React.useState('')
+   const [email, setEmail] = React.useState('')
+   const [message, setMessage] = React.useState('')
+   const [show, setShow] = React.useState(false)
+   const [modalMessage, setModalMessage] = React.useState(false)
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var street = this.props.data.address.street;
-      var city = this.props.data.address.city;
-      var state = this.props.data.address.state;
-      var zip = this.props.data.address.zip;
-      var phone= this.props.data.phone;
-      var email = this.props.data.email;
-      var message = this.props.data.contactmessage;
-    }
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+
+   const handleSubmit = (event) => {
+      event.preventDefault()
+      //const templateId = 'template_lCLMKCYL';
+
+      setModalMessage('Testing Modal Message')
+      handleShow()
+      
+      /** 
+
+	   window.emailjs.send(
+      "default_service", templateId, {
+        "reply_to": email,
+        "from_name": name,
+        "message_html": message
+      }).then(() => {
+         handleShow()
+      })
+      .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+      */
+  }
+
+    if(!data) return <section id="contact"/>
 
     return (
       <section id="contact">
@@ -27,7 +46,7 @@ class Contact extends Component {
 
             <div className="ten columns">
 
-                  <p className="lead">{message}</p>
+                  <p className="lead">{data.contactmessage}</p>
 
             </div>
 
@@ -41,26 +60,21 @@ class Contact extends Component {
 
                   <div>
 						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={e => setName(e.target.value)}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
+						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={e => setEmail(e.target.value)}/>
                   </div>
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={e => setMessage(e.target.value)}/>
                   </div>
 
                   <div>
-                     <button className="submit">Submit</button>
+                     <button className="submit" onClick={e => handleSubmit(e)}>Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>
@@ -74,45 +88,21 @@ class Contact extends Component {
 				   </div>
            </div>
 
-
             <aside className="four columns footer-widgets">
                <div className="widget widget_contact">
 
 					   <h4>Address and Phone</h4>
 					   <p className="address">
-						   {name}<br />
-						   {street} <br />
-						   {city}, {state} {zip}<br />
-						   <span>{phone}</span>
+						   {data.name}<br />
+						   {data.address.street} <br />
+						   {data.address.city}, {data.address.state} {data.address.zip}<br />
+						   <span>{data.phone}</span>
 					   </p>
 				   </div>
-
-               <div className="widget widget_tweets">
-                  <h4 className="widget-title">Latest Tweets</h4>
-                  <ul id="twitter">
-                     <li>
-                        <span>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                     </li>
-                     <li>
-                        <span>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                     </li>
-                  </ul>
-		         </div>
             </aside>
       </div>
    </section>
     );
   }
-}
 
 export default Contact;

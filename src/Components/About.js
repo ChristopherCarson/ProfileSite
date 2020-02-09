@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = ({ data }) => {
 
-    if(!data) return null
+    if(!data) return <section id="about"/>
 
     return (
       <section id="about">
