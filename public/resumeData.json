@@ -40,7 +40,7 @@
         ]
     },
     "resume": {
-        "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+        "skillmessage": "Git, React, Redux, Jest, Enzyme, JavaScript (ES6), Typescript, Leaflet, Cesium, GraphQL PostgreSQL, MySQL, Linux, Java, C++, Ruby and Python.",
         "education": [
             {
                 "school": "California State University Monterey Bay",
@@ -136,12 +136,8 @@
     "testimonials": {
         "testimonials": [
             {
-                "text": "Chris impressed me. He was a cut above the average Junior Engineer. I regret not having another contract to place him on. He will certainly contribute very well in his next development job. I'm happy to be a reference for him.",
-                "user": "Douglas MacDougal - Principle Engineer, Moebius Solutions, Inc."
-            },
-            {
-                "text": "I highly recommend Chris to anyone looking for a Full Stack or React developer. He came a long way in the year that he was part of my team. I was surprized the company wasn't able to retain him.",
-                "user": "Jeffery Taylor - Technical Lead, Moebius Solutions, Inc."
+                "text": "Chris was a great team member during his time at Moebius. He was a successful Junior Engineer and made significant contributions to our software. Unfortunately economic constraints required Moebius to restructure and lose valued employees such as Chris. I can confidently recommend Chris as a Software Engineer to any prospective employer and I wish him all the best in his job search.",
+                "user": "Douglas MacDougal, M.Sc. - Principle Engineer, Moebius Solutions, Inc."
             }
         ]
     }

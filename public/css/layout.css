@@ -48,6 +48,7 @@ header:before {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
+    margin-top: 100px;
 }
 header .banner {
     display: inline-block;
@@ -297,6 +298,9 @@ ul#nav li.current a {
 }
 #resume h3 {
     font: 25px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+}
+#resume h4 {
     color: #fff;
 }
 

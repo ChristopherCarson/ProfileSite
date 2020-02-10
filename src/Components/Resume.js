@@ -53,7 +53,6 @@ const Resume = ({ data }) => (
                         ))}
                     </div>
                 </div>
-
                 <div className="row skill">
                     <div className="three columns header-col">
                         <h1>
@@ -62,8 +61,8 @@ const Resume = ({ data }) => (
                     </div>
 
                     <div className="nine columns main-col">
-                        <p>{data.skillmessage}</p>
-
+                        <h4>{data.skillmessage}</h4>
+                        {/**
                         <div className="bars">
                             <ul className="skills">
                                 {data.skills.map(skills => (
@@ -80,6 +79,7 @@ const Resume = ({ data }) => (
                                 ))}
                             </ul>
                         </div>
+                        */}
                     </div>
                 </div>
             </div>
