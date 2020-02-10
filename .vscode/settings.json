@@ -4,6 +4,5 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Monokai Dark Soda",
-    "search.location": "panel"
+    "workbench.colorTheme": "Monokai Dark Soda"
 }

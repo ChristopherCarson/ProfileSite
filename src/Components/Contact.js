@@ -60,136 +60,144 @@ const Contact = ({ data }) => {
             });
     };
 
-    if (!data) return <section id="contact" />;
-
     return (
         <section id="contact">
-            <Modal
-                ariaHideApp={false}
-                isOpen={show}
-                onAfterOpen={() => {}}
-                onRequestClose={() => handleClose()}
-                style={customStyles}
-                contentLabel="Contact Form Results"
-            >
-                <h2 style={{ color: 'white' }}>{modalMessage}</h2>
-                <h2 style={{ color: 'white' }}>Thank you!</h2>
-                <hr />
-                <button
-                    style={{ background: '#474747' }}
-                    onClick={() => handleClose()}
-                >
-                    Close
-                </button>
-            </Modal>
-
-            <div className="row section-head">
-                <div className="two columns header-col">
-                    <h1>
-                        <span>Get In Touch.</span>
-                    </h1>
-                </div>
-
-                <div className="ten columns">
-                    <p className="lead">{data.contactmessage}</p>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="eight columns">
-                    <div>
-                        <label htmlFor="contactName">
-                            Name <span className="required">*</span>
-                        </label>
-                        <input
-                            value={name}
-                            type="text"
-                            size="35"
-                            id="contactName"
-                            name="contactName"
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </div>
-
-                    <div>
-                        <label htmlFor="contactEmail">
-                            Email <span className="required">*</span>
-                        </label>
-                        <input
-                            value={email}
-                            type="text"
-                            size="35"
-                            id="contactEmail"
-                            name="contactEmail"
-                            onChange={e => setEmail(e.target.value)}
-                        />
-                    </div>
-
-                    <div>
-                        <label htmlFor="contactMessage">
-                            Message <span className="required">*</span>
-                        </label>
-                        <textarea
-                            value={message}
-                            cols="50"
-                            rows="15"
-                            id="contactMessage"
-                            name="contactMessage"
-                            onChange={e => setMessage(e.target.value)}
-                        />
-                    </div>
-
-                    <div>
-                        <h3 hidden={!error || (error && name !== '')}>
-                            Name is a required field.
-                        </h3>
-                        <h3 hidden={!error || (error && email !== '')}>
-                            Email is a required field.
-                        </h3>
-                        <h3 hidden={!error || (error && message !== '')}>
-                            Message is a required field.
-                        </h3>
+            {data && (
+                <div>
+                    <Modal
+                        ariaHideApp={false}
+                        isOpen={show}
+                        onAfterOpen={() => {}}
+                        onRequestClose={() => handleClose()}
+                        style={customStyles}
+                        contentLabel="Contact Form Results"
+                    >
+                        <h2 style={{ color: 'white' }}>{modalMessage}</h2>
+                        <h2 style={{ color: 'white' }}>Thank you!</h2>
+                        <hr />
                         <button
-                            className="submit"
-                            onClick={e => {
-                                if (
-                                    name === '' ||
-                                    email === '' ||
-                                    message === ''
-                                ) {
-                                    setError(true);
-                                } else {
-                                    setError(false);
-                                    setSpinner(true);
-                                    handleSubmit(e);
-                                }
-                            }}
+                            style={{ background: '#474747' }}
+                            onClick={() => handleClose()}
                         >
-                            Submit
+                            Close
                         </button>
-                        <span
-                            id={spinner ? 'image-loader-show' : 'image-loader'}
-                        >
-                            <img alt="" src="images/loader.gif" />
-                        </span>
+                    </Modal>
+
+                    <div className="row section-head">
+                        <div className="two columns header-col">
+                            <h1>
+                                <span>Get In Touch.</span>
+                            </h1>
+                        </div>
+
+                        <div className="ten columns">
+                            <p className="lead">{data.contactmessage}</p>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="eight columns">
+                            <div>
+                                <label htmlFor="contactName">
+                                    Name <span className="required">*</span>
+                                </label>
+                                <input
+                                    value={name}
+                                    type="text"
+                                    size="35"
+                                    id="contactName"
+                                    name="contactName"
+                                    onChange={e => setName(e.target.value)}
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="contactEmail">
+                                    Email <span className="required">*</span>
+                                </label>
+                                <input
+                                    value={email}
+                                    type="text"
+                                    size="35"
+                                    id="contactEmail"
+                                    name="contactEmail"
+                                    onChange={e => setEmail(e.target.value)}
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="contactMessage">
+                                    Message <span className="required">*</span>
+                                </label>
+                                <textarea
+                                    value={message}
+                                    cols="50"
+                                    rows="15"
+                                    id="contactMessage"
+                                    name="contactMessage"
+                                    onChange={e => setMessage(e.target.value)}
+                                />
+                            </div>
+
+                            <div>
+                                <h3 hidden={!error || (error && name !== '')}>
+                                    Name is a required field.
+                                </h3>
+                                <h3 hidden={!error || (error && email !== '')}>
+                                    Email is a required field.
+                                </h3>
+                                <h3
+                                    hidden={!error || (error && message !== '')}
+                                >
+                                    Message is a required field.
+                                </h3>
+                                <button
+                                    className="submit"
+                                    onClick={e => {
+                                        if (
+                                            name === '' ||
+                                            email === '' ||
+                                            message === ''
+                                        ) {
+                                            setError(true);
+                                        } else {
+                                            setError(false);
+                                            setSpinner(true);
+                                            handleSubmit(e);
+                                        }
+                                    }}
+                                >
+                                    Submit
+                                </button>
+                                <span
+                                    id={
+                                        spinner
+                                            ? 'image-loader-show'
+                                            : 'image-loader'
+                                    }
+                                >
+                                    <img alt="" src="images/loader.gif" />
+                                </span>
+                            </div>
+                        </div>
+
+                        <aside className="four columns footer-widgets">
+                            <div className="widget widget_contact">
+                                <h4>Address and Phone</h4>
+                                <p className="address">
+                                    {data.name}
+                                    <br />
+                                    {data.address.street} <br />
+                                    {data.address.city}, {data.address.state}{' '}
+                                    {data.address.zip}
+                                    <br />
+                                    <span>{data.phone}</span>
+                                </p>
+                            </div>
+                        </aside>
                     </div>
                 </div>
-
-                <aside className="four columns footer-widgets">
-                    <div className="widget widget_contact">
-                        <h4>Address and Phone</h4>
-                        <p className="address">
-                            {data.name}
-                            <br />
-                            {data.address.street} <br />
-                            {data.address.city}, {data.address.state}{' '}
-                            {data.address.zip}
-                            <br />
-                            <span>{data.phone}</span>
-                        </p>
-                    </div>
-                </aside>
-            </div>
+            )}
         </section>
     );
 };

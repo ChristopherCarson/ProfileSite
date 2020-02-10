@@ -109,7 +109,7 @@ header .social li a {
     color: #fff;
 }
 header .social li a:hover {
-    color: #11abb0;
+    color: #9d4cf3;
 }
 
 /* scrolldown link */
@@ -133,7 +133,7 @@ header .scrolldown a {
     transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
-    color: #11abb0;
+    color: #9d4cf3;
 }
 
 /* primary navigation
@@ -469,6 +469,7 @@ ul#nav li.current a {
     background: #3b3f3f;
     padding-top: 90px;
     padding-bottom: 60px;
+    text-align: center;
 }
 #portfolio h1 {
     font: 15px/24px 'opensans-semibold', sans-serif;
@@ -543,7 +544,9 @@ ul#nav li.current a {
     margin-top: -15px;
 }
 .portfolio-item .item-wrap img {
-    vertical-align: bottom;
+    vertical-align: middle;
+    max-height: 170px;
+    width: 100%;
 }
 .portfolio-item .portfolio-item-meta {
     padding: 18px;
@@ -614,7 +617,7 @@ ul#nav li.current a {
     cursor: pointer;
 }
 .popup-modal a:hover {
-    color: #00cccc;
+    color: #9d4cf3;
 }
 .popup-modal a.popup-modal-dismiss {
     margin-left: 24px;
@@ -1010,7 +1013,7 @@ call-to-action .button {
     color: #d72828;
 }
 #message-success {
-    color: #11abb0;
+    color: #9d4cf3;
 }
 
 #message-warning i,
@@ -1139,5 +1142,5 @@ footer .social-links li:first-child {
     border-radius: 100%;
 }
 #go-top a:hover {
-    background-color: #0f9095;
+    background-color: #9d4cf3;
 }
