@@ -89,6 +89,7 @@ header .banner-text h3 {
     }
     header .banner-text h3 {
         font: 12px/1.9em 'librebaskerville-regular', serif;
+        width: 70%;
     }
 }
 header .banner-text h3 span,
