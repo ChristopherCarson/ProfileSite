@@ -18,6 +18,7 @@ const Portfolio = ({ data }) => (
                                 <div className="item-wrap">
                                     <a
                                         href={projects.url}
+                                        target="_blank"
                                         title={projects.title}
                                     >
                                         <img
@@ -27,9 +28,11 @@ const Portfolio = ({ data }) => (
                                                 projects.image
                                             }
                                         />
+
                                         <div className="overlay">
                                             <div className="portfolio-item-meta">
                                                 <h5>{projects.title}</h5>
+                                                <hr />
                                                 <p>{projects.category}</p>
                                             </div>
                                         </div>
