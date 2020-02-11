@@ -40,6 +40,7 @@ header {
     -webkit-background-size: cover !important;
     text-align: center;
     overflow: hidden;
+    padding-top: 140px;
 }
 
 /* vertically center banner section */
@@ -48,7 +49,6 @@ header:before {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-    margin-top: 100px;
 }
 header .banner {
     display: inline-block;
@@ -489,7 +489,7 @@ ul#nav li.current a {
     margin-bottom: 36px;
 }
 .portfolio-item .item-wrap {
-    background: #fff;
+    background: #3b3f3f;
     overflow: hidden;
     position: relative;
 
@@ -550,6 +550,7 @@ ul#nav li.current a {
 .portfolio-item .item-wrap img {
     vertical-align: middle;
     max-height: 170px;
+    max-width: 230px;
     width: 100%;
 }
 .portfolio-item .portfolio-item-meta {
@@ -748,6 +749,11 @@ call-to-action .button {
     text-align: left;
     float: left;
     color: #fff;
+}
+@media screen and (max-width: 1000px) {
+    #testimonials .header-col h1:before {
+        font-size: 32px;
+    }
 }
 
 /*	Blockquotes */
