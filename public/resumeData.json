@@ -115,13 +115,13 @@
             },
             {
                 "title": "Profile Website",
-                "category": "This site was built with Functional React.js and Babel. Check out the code on my GitHub!",
+                "category": "This profile site was built with Functional React.js, ES6 and Babel. Check out the code on my GitHub!",
                 "image": "profile-site.png",
                 "url": "https://github.com/CodeBloodedChris/ProfileSite"
             },
             {
                 "title": "StarMax - Storefront with Admin dashboard",
-                "category": "A demo storefront built PHP, JQuery, Ajax and Bootstrap. Click to view the live site!",
+                "category": "A demo storefront built with PHP, JQuery, Ajax and Bootstrap. Click to view the live site!",
                 "image": "starmax.png",
                 "url": "https://starmax.herokuapp.com/"
             },
@@ -139,7 +139,7 @@
             },
             {
                 "title": "Connections - A Sales and Analytics Tool",
-                "category": "An integrated storefront built for a previous empployer. Complete with an admin dashboarb and B2B portal.",
+                "category": "An integrated storefront built for a previous employer. Complete with an admin dashboarb and B2B portal.",
                 "image": "central.png",
                 "url": "https://centralsanitary.com/"
             }
