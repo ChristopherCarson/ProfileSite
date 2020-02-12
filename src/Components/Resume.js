@@ -18,11 +18,7 @@ const Resume = ({ data }) => (
                                     <div key={education.school}>
                                         <h3>{education.school}</h3>
                                         <p className="info">
-                                            {education.degree}{' '}
-                                            <span>&bull;</span>
-                                            <em className="date">
-                                                {education.graduated}
-                                            </em>
+                                            {education.degree}
                                         </p>
                                         <p>{education.description}</p>
                                     </div>
