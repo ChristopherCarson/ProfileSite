@@ -127,7 +127,7 @@
             },
             {
                 "title": "Peril - Multiplayer Trivia Game",
-                "category": "A collobrorative projoct for a multi-player trivia game. Check out the code on Github!",
+                "category": "A collobrorative projoct for a multi-player trivia game using Ruby on Rails and Action Rail. Check out the code on Github!",
                 "image": "peril.png",
                 "url": "https://github.com/CodeBloodedChris/CST438"
             },
