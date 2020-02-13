@@ -11,6 +11,11 @@
 @media only screen and (max-width: 1024px) {
     /* header styles
    ------------------------------------------------------------------ */
+    .shimmer {
+        font: 80px/1.1em 'opensans-bold', sans-serif;
+        letter-spacing: -1px;
+        margin: 0 auto 12px auto;
+    }
     header .banner-text h1 {
         font: 80px/1.1em 'opensans-bold', sans-serif;
         letter-spacing: -1px;
@@ -25,6 +30,10 @@
    ------------------------------------------------------------------ */
     header .banner {
         padding-bottom: 12px;
+    }
+    .shimmer {
+        font: 78px/1.1em 'opensans-bold', sans-serif;
+        letter-spacing: -1px;
     }
     header .banner-text h1 {
         font: 78px/1.1em 'opensans-bold', sans-serif;
@@ -197,6 +206,9 @@
     header .banner {
         padding-bottom: 12px;
         padding-top: 6px;
+    }
+    .shimmer {
+        font: 68px/1.1em 'opensans-bold', sans-serif;
     }
     header .banner-text h1 {
         font: 68px/1.1em 'opensans-bold', sans-serif;
@@ -413,6 +425,10 @@
    -------------------------------------------------------------------- */
     header .banner {
         padding-top: 24px;
+    }
+    .shimmer {
+        font: 40px/1.1em 'opensans-bold', sans-serif;
+        margin: 0 auto 24px auto;
     }
     header .banner-text h1 {
         font: 40px/1.1em 'opensans-bold', sans-serif;
