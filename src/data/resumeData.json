@@ -58,7 +58,7 @@
         "work": [
             {
                 "company": "Moebius Solutions, Inc.",
-                "title": "Remote Software Engineer",
+                "title": "Remote Junior Software Engineer",
                 "years": "January 2019 - February 2020",
                 "description": "Worked as a full stack developer on a four-person distributed team creating a highly optimized React app for the Department of Defense. Project utilized Node.js, Babel, TypeScript, GraphQL, React.js, Redux, Jest, Cesium and Leaflet libraries."
             },
@@ -148,7 +148,7 @@
     "testimonials": {
         "testimonials": [
             {
-                "text": "Chris was a great team member during his time at Moebius. He was a successful Software Engineer and made significant contributions to our software. Unfortunately economic constraints required Moebius to restructure and lose valued employees such as Chris. I can confidently recommend Chris as a Software Engineer to any prospective employer.",
+                "text": "Chris was a great team member during his time at Moebius. He was a successful Junior Engineer and made significant contributions to our software. Unfortunately economic constraints required Moebius to restructure and lose valued employees such as Chris. I can confidently recommend Chris as a Software Engineer to any prospective employer.",
                 "user": "Douglas MacDougal, M.Sc. - Principle Engineer, Moebius Solutions, Inc."
             },
             {
