@@ -32,21 +32,6 @@
                 emailjs.init('user_iNLf3EzcnOpYBuz2jXsPr');
                 console.log('emails initiated!');
             })();
-            var express = require('express');
-            var http = require('http');
-            var enforce = require('express-sslify');
-
-            var app = express();
-
-            // Use enforce.HTTPS({ trustProtoHeader: true }) in case you are behind
-            // a load balancer (e.g. Heroku). See further comments below
-            app.use(enforce.HTTPS());
-
-            http.createServer(app).listen(app.get('port'), function() {
-                console.log(
-                    'Express server listening on port ' + app.get('port')
-                );
-            });
         </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
