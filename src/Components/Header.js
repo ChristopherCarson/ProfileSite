@@ -55,19 +55,14 @@ const Header = ({ data }) => (
 
         {data && (
             <div className="row banner">
+                <h1 className="shimmer">{data.name}</h1>
                 <div className="banner-text">
                     <FadeIn delay={150}>
-                        <h1 className="responsive-headline">{data.name}</h1>
-                        <h2 className="responsive-headline">
-                            {data.occupation}
-                        </h2>
-
+                        <h2>{data.occupation}</h2>
                         <hr />
                         <h3>{data.description}</h3>
                         <hr />
-                        <h3 className="responsive-headline">
-                            Security Clearance Level: Secret
-                        </h3>
+                        <h3>Security Clearance Level: Secret</h3>
 
                         <hr />
                         <ul className="social">

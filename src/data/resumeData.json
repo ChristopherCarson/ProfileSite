@@ -3,7 +3,7 @@
         "name": "Christopher Carson",
         "occupation": "Remote Software Engineer",
         "description": "I was recently working on a defense contract that was cancelled early. I'm currently on the job hunt and looking to take a remote software engineering job with the right company.",
-        "image": "profilepic.jpg",
+        "image": "me.png",
         "bio": "I started my career in business, but quickly made the jump to softawre engineering. I love building systems from the ground up. I can't imagine a more rewarding career.",
         "contactmessage": "Please feel free to call day or night with employment oppurtunities.",
         "email": "Email on resume",
@@ -148,12 +148,12 @@
     "testimonials": {
         "testimonials": [
             {
-                "text": "Chris was a great team member during his time at Moebius. He was a successful Engineer and made significant contributions to our software. Unfortunately economic constraints required Moebius to restructure and lose valued employees such as Chris. I can confidently recommend Chris as a Software Engineer to any prospective employer.",
+                "text": "Chris was a great team member during his time at Moebius. He was a successful Software Engineer and made significant contributions to our software. Unfortunately economic constraints required Moebius to restructure and lose valued employees such as Chris. I can confidently recommend Chris as a Software Engineer to any prospective employer.",
                 "user": "Douglas MacDougal, M.Sc. - Principle Engineer, Moebius Solutions, Inc."
             },
             {
                 "text": "Chris Carson was an invaluable member of our team. It was sad to see him go. We still reach out to him today for consultation on our technology needs.",
-                "user": "Christopher Martini – V.P. of Marketing"
+                "user": "Christopher Martini – V.P. of Marketing, Central Sanitary Supply"
             }
         ]
     }

@@ -30,6 +30,117 @@ body {
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
 
+@import url('http://fonts.googleapis.com/css?family=Alegreya+Sans:300');
+body {
+    background: #000;
+}
+.shimmer {
+    /* styling stuff */
+    font: 90px/1.1em 'opensans-bold', sans-serif;
+    margin: 0 auto 18px auto;
+    padding: 0 40px;
+    text-align: center;
+    color: rgba(169, 24, 212, 0.9);
+}
+.shimmer {
+    /* the shimmer magic */
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.1, #fff)
+    );
+    background: -moz-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+    );
+    background: gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+    );
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    -webkit-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #222;
+}
+
+@-moz-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@-o-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@-ms-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
 header {
     position: relative;
     height: 800px;
@@ -49,6 +160,7 @@ header:before {
     vertical-align: middle;
     height: 100%;
 }
+
 header .banner {
     display: inline-block;
     vertical-align: middle;
@@ -68,6 +180,7 @@ header .banner-text h1 {
     margin: 0 auto 18px auto;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
 }
+
 header .banner-text h2 {
     font: 40px/1.1em 'opensans-bold', sans-serif;
     color: rgb(234, 233, 235);
