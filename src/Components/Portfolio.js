@@ -21,6 +21,7 @@ const Portfolio = ({ data }) => (
                                     <a
                                         href={projects.url}
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         title={projects.title}
                                     >
                                         <img

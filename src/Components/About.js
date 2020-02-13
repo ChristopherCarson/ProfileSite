@@ -37,6 +37,7 @@ const About = ({ data }) => (
                                 <a
                                     href={data.resumedownload}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="button"
                                 >
                                     <i className="fa fa-download"></i>
