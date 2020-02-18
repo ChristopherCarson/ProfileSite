@@ -74,6 +74,18 @@ const Resium = () => {
                 count={20}
                 fadeOutSpeed={40}
             />
+            <span
+                style={{
+                    position: 'absolute',
+                    left: 650,
+                    top: 200,
+                    height: 600,
+                    width: 600,
+                    backgroundColor: 'transparent',
+                    borderRadius: '50%',
+                    display: 'inline-block'
+                }}
+            ></span>
         </div>
     );
 };
