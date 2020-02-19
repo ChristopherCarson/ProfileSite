@@ -1,6 +1,7 @@
-import { Viewer } from 'resium';
+import { Viewer, CameraFlyTo } from 'resium';
 import React from 'react';
 import Sparkle from 'react-sparkle';
+import { Cartesian3 } from 'cesium';
 
 const Resium = () => {
     return (
@@ -66,7 +67,12 @@ const Resium = () => {
                 scene3DOnly={false}
                 baseLayerPicker={false}
                 creditContainer={'newCredit'}
-            />
+            >
+                <CameraFlyTo
+                    duration={5}
+                    destination={Cartesian3.fromDegrees(36, 119, 50000000)}
+                />
+            </Viewer>
             <Sparkle
                 minSize={1}
                 maxSize={8}
@@ -74,18 +80,6 @@ const Resium = () => {
                 count={20}
                 fadeOutSpeed={40}
             />
-            <span
-                style={{
-                    position: 'absolute',
-                    left: 650,
-                    top: 200,
-                    height: 600,
-                    width: 600,
-                    backgroundColor: 'transparent',
-                    borderRadius: '50%',
-                    display: 'inline-block'
-                }}
-            ></span>
         </div>
     );
 };
