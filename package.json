@@ -1,48 +1,49 @@
 {
-  "name": "my-profile",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "express-sslify": "^1.2.0",
-    "jquery": "^3.4.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-fade-in": "^0.1.8",
-    "react-ga": "^2.7.0",
-    "react-https-redirect": "^1.1.0",
-    "react-modal": "^3.11.1",
-    "react-scripts": "3.3.1",
-    "react-sparkle": "^1.0.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "babel src -d lib",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "prettier": "^1.19.1"
-  }
+    "name": "my-profile",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.4.0",
+        "@testing-library/user-event": "^7.2.1",
+        "express-sslify": "^1.2.0",
+        "jquery": "^3.4.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-fade-in": "^0.1.8",
+        "react-ga": "^2.7.0",
+        "react-https-redirect": "^1.1.0",
+        "react-modal": "^3.11.1",
+        "react-scripts": "3.3.1",
+        "react-sparkle": "^1.0.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "babel src -d lib",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "prepublish": "npm run build"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.4",
+        "@babel/preset-env": "^7.8.4",
+        "@babel/preset-react": "^7.8.3",
+        "prettier": "^1.19.1"
+    }
 }
