@@ -24,7 +24,7 @@
         "eject": "react-scripts eject",
         "prepublish": "npm run build",
         "dev": "react-scripts start",
-        "start": "serve -s lib",
+        "start": "react-scripts start",
         "heroku-postbuild": "npm run build"
     },
     "eslintConfig": {
