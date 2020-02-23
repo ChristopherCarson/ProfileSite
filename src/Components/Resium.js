@@ -1,11 +1,32 @@
-import { Viewer, CameraFlyTo } from 'resium';
-import React from 'react';
+import { Viewer, Camera, Entity, CameraFlyTo } from 'resium';
+import React, { useEffect, useState } from 'react';
 import Sparkle from 'react-sparkle';
-import { Cartesian3 } from 'cesium';
+import { Cartesian3, Cartesian2, Color } from 'cesium';
 
 const Resium = () => {
+    const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+    const [load, setLoad] = useState(false);
+    const posit = new Cartesian2();
+    let viewer;
+
+    const updateCoordinates = () => {
+        if (viewer) {
+            setCoordinates(
+                window.Cesium.SceneTransforms.wgs84ToWindowCoordinates(
+                    viewer.cesiumElement.scene,
+                    Cartesian3.fromDegrees(-120, 38),
+                    posit
+                )
+            );
+        }
+    };
+
+    useEffect(() => {
+        if (coordinates.x === 0) updateCoordinates();
+    });
+
     return (
-        <div id="home">
+        <div id={'home'}>
             <div id={'newCredit'} style={{ display: 'none' }}></div>
             <nav id="nav-wrap">
                 <a
@@ -53,6 +74,9 @@ const Resium = () => {
                 </ul>
             </nav>
             <Viewer
+                ref={e => {
+                    viewer = e;
+                }}
                 animation={false}
                 fullscreenButton={false}
                 vrButton={false}
@@ -68,18 +92,44 @@ const Resium = () => {
                 baseLayerPicker={false}
                 creditContainer={'newCredit'}
             >
-                <CameraFlyTo
-                    duration={5}
-                    destination={Cartesian3.fromDegrees(36, 119, 50000000)}
+                <Camera
+                    onChange={() => updateCoordinates()}
+                    onMoveEnd={() => setLoad(true)}
+                    percentageChanged={0.001}
                 />
+                <CameraFlyTo
+                    onComplete={console.log(load)}
+                    destination={Cartesian3.fromDegrees(-80, 38, 20000000)}
+                    duration={5}
+                    once={true}
+                />
+                <Entity
+                    name="test2"
+                    description="test!!"
+                    position={Cartesian3.fromDegrees(-120, 38)}
+                    point={{ pixelSize: 15, color: Color.BLUE }}
+                ></Entity>
             </Viewer>
-            <Sparkle
-                minSize={1}
-                maxSize={8}
-                flickerSpeed={'slowest'}
-                count={20}
-                fadeOutSpeed={40}
-            />
+            <div
+                id="testDiv"
+                style={{
+                    backgroundColor: 'black',
+                    position: 'absolute',
+                    left: coordinates.x,
+                    top: coordinates.y,
+                    width: 300,
+                    display: load ? 'inline-block' : 'none'
+                }}
+            >
+                <p className="expandable">
+                    Cum enim magna parturient ac elementum, tincidunt tempor ac
+                    lectus platea placerat. Eros dis lectus. Ut aliquam.
+                    Porttitor risus mattis mauris lacus a, aliquam augue cras
+                    elementum! Adipiscing, vel ridiculus diam pellentesque
+                    sociis habitasse pellentesque, augue parturient sed
+                    elementum aenean. Tincidunt tristique.
+                </p>
+            </div>
         </div>
     );
 };

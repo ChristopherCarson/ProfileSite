@@ -21,7 +21,7 @@ const App = () => {
 
     return (
         <HttpsRedirect>
-            <div className="App">
+            <div className="App" id="App">
                 <Resium />
                 {/**<Header data={myData.main} />*/}
                 <About data={myData.main} />
