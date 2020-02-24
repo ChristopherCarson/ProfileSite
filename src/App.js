@@ -22,14 +22,14 @@ const App = () => {
     return (
         <HttpsRedirect>
             <div className="App" id="App">
-                <Resium />
-                {/**<Header data={myData.main} />*/}
+                <Resium data={myData} />
+                {/**<Header data={myData.main} />
                 <About data={myData.main} />
                 <Resume data={myData.resume} />
                 <Portfolio data={myData.portfolio} />
                 <Testimonials data={myData.testimonials} />
                 <Contact data={myData.main} />
-                <Footer data={myData.main} />
+                <Footer data={myData.main} />*/}
             </div>
         </HttpsRedirect>
     );

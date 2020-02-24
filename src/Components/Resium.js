@@ -2,12 +2,45 @@ import { Viewer, Camera, Entity, CameraFlyTo } from 'resium';
 import React, { useEffect, useState } from 'react';
 import Sparkle from 'react-sparkle';
 import { Cartesian3, Cartesian2, Color } from 'cesium';
+import AboutMe from './AboutMe';
+//import MyComponent from './Resize';
 
-const Resium = () => {
+const Resium = ({ data }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const [load, setLoad] = useState(false);
+    const [nav, setNav] = useState('home');
     const posit = new Cartesian2();
     let viewer;
+
+    function debounce(fn, ms) {
+        let timer;
+        return _ => {
+            clearTimeout(timer);
+            timer = setTimeout(_ => {
+                timer = null;
+                fn.apply(this, arguments);
+            }, ms);
+        };
+    }
+
+    const [dimensions, setDimensions] = React.useState({
+        height: window.innerHeight,
+        width: window.innerWidth
+    });
+    React.useEffect(() => {
+        const debouncedHandleResize = debounce(function handleResize() {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth
+            });
+        }, 1000);
+
+        window.addEventListener('resize', debouncedHandleResize);
+
+        return _ => {
+            window.removeEventListener('resize', debouncedHandleResize);
+        };
+    });
 
     const updateCoordinates = () => {
         if (viewer) {
@@ -41,18 +74,30 @@ const Resium = () => {
                 </a>
 
                 <ul id="nav" className="nav">
-                    <li className="current">
-                        <a className="smoothscroll" href="#home">
+                    <li className={nav === 'home' ? 'current' : 'none'}>
+                        <a
+                            href="#home"
+                            onClick={() => {
+                                if (nav !== 'home') setLoad(false);
+                                setNav('home');
+                            }}
+                        >
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a className="smoothscroll" href="#about">
+                    <li className={nav === 'about' ? 'current' : 'none'}>
+                        <a
+                            href="#about"
+                            onClick={() => {
+                                if (nav !== 'about') setLoad(false);
+                                setNav('about');
+                            }}
+                        >
                             About
                         </a>
                     </li>
-                    <li>
-                        <a className="smoothscroll" href="#resume">
+                    <li className={nav === 'resume' ? 'current' : 'none'}>
+                        <a href="#resume" onClick={() => setNav('resume')}>
                             Resume
                         </a>
                     </li>
@@ -97,39 +142,39 @@ const Resium = () => {
                     onMoveEnd={() => setLoad(true)}
                     percentageChanged={0.001}
                 />
-                <CameraFlyTo
-                    onComplete={console.log(load)}
-                    destination={Cartesian3.fromDegrees(-80, 38, 20000000)}
-                    duration={5}
-                    once={true}
-                />
-                <Entity
-                    name="test2"
-                    description="test!!"
-                    position={Cartesian3.fromDegrees(-120, 38)}
-                    point={{ pixelSize: 15, color: Color.BLUE }}
-                ></Entity>
+                {nav === 'about' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-90, 38, 20000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'home' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-80, 10, 30000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'about' && load && (
+                    <Entity
+                        position={Cartesian3.fromDegrees(-120, 38)}
+                        point={{ pixelSize: 15, color: Color.BLUE }}
+                        onClick={() => setLoad(true)}
+                    ></Entity>
+                )}
             </Viewer>
-            <div
-                id="testDiv"
-                style={{
-                    backgroundColor: 'black',
-                    position: 'absolute',
-                    left: coordinates.x,
-                    top: coordinates.y,
-                    width: 300,
-                    display: load ? 'inline-block' : 'none'
-                }}
-            >
-                <p className="expandable">
-                    Cum enim magna parturient ac elementum, tincidunt tempor ac
-                    lectus platea placerat. Eros dis lectus. Ut aliquam.
-                    Porttitor risus mattis mauris lacus a, aliquam augue cras
-                    elementum! Adipiscing, vel ridiculus diam pellentesque
-                    sociis habitasse pellentesque, augue parturient sed
-                    elementum aenean. Tincidunt tristique.
-                </p>
-            </div>
+
+            <AboutMe
+                x={coordinates.x}
+                y={coordinates.y}
+                dimensions={dimensions}
+                setLoad={setLoad}
+                load={load}
+                nav={nav}
+                updateCoordinates={updateCoordinates}
+                data={data.main}
+            />
         </div>
     );
 };

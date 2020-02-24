@@ -1,3 +1,62 @@
+ul#nav li a:active {
+    background-color: transparent !important;
+}
+ul#nav li.current a {
+    color: blue;
+}
+
+/*
+  ---------------------------------------------------
+  Animations for slide in left, slide out right
+  ---------------------------------------------------
+  */
+
+.slide-appear,
+.slide-enter {
+    opacity: 0;
+    transform: translateX(-250px);
+}
+.slide-appear.slide-appear-active,
+.slide-enter.slide-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.slide-leave {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-leave.slide-leave-active {
+    opacity: 0;
+    transform: translateX(250px);
+    transition: 0.5s;
+}
+
+.spicy-appear,
+.spicy-enter {
+    opacity: 0.01;
+    transform: scaleX(0) translateY(100px);
+}
+
+.spicy-enter.spicy-enter-active {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+    transition: all 500ms ease-in-out;
+}
+
+.spicy-leave {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+}
+
+.spicy-leave-active {
+    opacity: 01;
+    transform: scaleX(0) translateY(100px);
+    transition: all 300ms ease-in-out;
+}
+
 /*
 =====================================================================
 *   Ceevee v1.0 Layout Stylesheet
@@ -318,13 +377,6 @@ ul#nav li a {
     transition: color 0.2s ease-in-out;
 }
 
-ul#nav li a:active {
-    background-color: transparent !important;
-}
-ul#nav li.current a {
-    color: #9d4cf3;
-}
-
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
@@ -346,9 +398,9 @@ ul#nav li.current a {
 }
 
 #about h2 {
-    font: 22px/30px 'opensans-bold', sans-serif;
-    color: #fff;
-    margin-bottom: 12px;
+    font: 60px/60px 'opensans-bold', sans-serif;
+    color: blue;
+    margin-bottom: 24px;
 }
 #about p {
     line-height: 30px;
