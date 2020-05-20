@@ -4,5 +4,5 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Monokai Dark Soda"
+    "workbench.colorTheme": "Dark Atom Dark Green Cursor"
 }

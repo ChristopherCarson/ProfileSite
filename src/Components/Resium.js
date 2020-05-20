@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Sparkle from 'react-sparkle';
 import { Cartesian3, Cartesian2, Color } from 'cesium';
 import AboutMe from './AboutMe';
+import ResumeMe from './ResumeMe';
+import Home from './Home';
 //import MyComponent from './Resize';
 
 const Resium = ({ data }) => {
@@ -97,28 +99,52 @@ const Resium = ({ data }) => {
                         </a>
                     </li>
                     <li className={nav === 'resume' ? 'current' : 'none'}>
-                        <a href="#resume" onClick={() => setNav('resume')}>
+                        <a
+                            href="#resume"
+                            onClick={() => {
+                                if (nav !== 'resume') setLoad(false);
+                                setNav('resume');
+                            }}
+                        >
                             Resume
                         </a>
                     </li>
-                    <li>
-                        <a className="smoothscroll" href="#portfolio">
+                    <li className={nav === 'works' ? 'current' : 'none'}>
+                        <a
+                            href="#works"
+                            onClick={() => {
+                                if (nav !== 'works') setLoad(false);
+                                setNav('works');
+                            }}
+                        >
                             Works
-                        </a>
+                            </a>
                     </li>
-                    <li>
-                        <a className="smoothscroll" href="#testimonials">
+                    <li className={nav === 'references' ? 'current' : 'none'}>
+                        <a
+                            href="#references"
+                            onClick={() => {
+                                if (nav !== 'references') setLoad(false);
+                                setNav('references');
+                            }}
+                        >
                             References
                         </a>
                     </li>
-                    <li>
-                        <a className="smoothscroll" href="#contact">
+                    <li className={nav === 'contact' ? 'current' : 'none'}>
+                        <a
+                            href="#contact"
+                            onClick={() => {
+                                if (nav !== 'contact') setLoad(false);
+                                setNav('contact');
+                            }}
+                        >
                             Contact
                         </a>
                     </li>
                 </ul>
             </nav>
-            <Viewer
+            <Viewer full
                 ref={e => {
                     viewer = e;
                 }}
@@ -142,16 +168,16 @@ const Resium = ({ data }) => {
                     onMoveEnd={() => setLoad(true)}
                     percentageChanged={0.001}
                 />
-                {nav === 'about' && (
+                {nav === 'home' && (
                     <CameraFlyTo
-                        destination={Cartesian3.fromDegrees(-90, 38, 20000000)}
+                        destination={Cartesian3.fromDegrees(-80, 10, 30000000)}
                         duration={1}
                         once={true}
                     />
                 )}
-                {nav === 'home' && (
+                {nav === 'about' && (
                     <CameraFlyTo
-                        destination={Cartesian3.fromDegrees(-80, 10, 30000000)}
+                        destination={Cartesian3.fromDegrees(-90, 38, 20000000)}
                         duration={1}
                         once={true}
                     />
@@ -160,21 +186,85 @@ const Resium = ({ data }) => {
                     <Entity
                         position={Cartesian3.fromDegrees(-120, 38)}
                         point={{ pixelSize: 15, color: Color.BLUE }}
-                        onClick={() => setLoad(true)}
+                    //onClick={() => setLoad(true)}
                     ></Entity>
                 )}
+                {nav === 'resume' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-90, 38, 30000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'works' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-90, 38, 180000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'references' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-120, 38, 10000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'contact' && (
+                    <CameraFlyTo
+                        destination={Cartesian3.fromDegrees(-120, 38, 1000000)}
+                        duration={1}
+                        once={true}
+                    />
+                )}
+                {nav === 'resume' && load && (
+                    <>
+                        <Entity
+                            position={Cartesian3.fromDegrees(-120, 38)}
+                            point={{ pixelSize: 15, color: Color.WHITE }}
+                        //onClick={() => setLoad(true)}
+                        ></Entity>
+                        <Entity
+                            position={Cartesian3.fromDegrees(-120, 72)}
+                            point={{ pixelSize: 15, color: Color.WHITE }}
+                        //onClick={() => setLoad(true)}
+                        ></Entity>
+                    </>
+                )}
+                <AboutMe
+                    x={coordinates.x}
+                    y={coordinates.y}
+                    dimensions={dimensions}
+                    setLoad={setLoad}
+                    load={load}
+                    nav={nav}
+                    updateCoordinates={updateCoordinates}
+                    data={data.main}
+                />
+                <Home
+                    x={coordinates.x}
+                    y={coordinates.y}
+                    dimensions={dimensions}
+                    setLoad={setLoad}
+                    load={load}
+                    nav={nav}
+                    updateCoordinates={updateCoordinates}
+                    data={data.main}
+                />
+                <ResumeMe
+                    x={coordinates.x}
+                    y={coordinates.y}
+                    dimensions={dimensions}
+                    setLoad={setLoad}
+                    load={load}
+                    nav={nav}
+                    updateCoordinates={updateCoordinates}
+                    data={data.main}
+                />
+
             </Viewer>
 
-            <AboutMe
-                x={coordinates.x}
-                y={coordinates.y}
-                dimensions={dimensions}
-                setLoad={setLoad}
-                load={load}
-                nav={nav}
-                updateCoordinates={updateCoordinates}
-                data={data.main}
-            />
+
         </div>
     );
 };

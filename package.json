@@ -20,6 +20,7 @@
         "react-ga": "^2.7.0",
         "react-hot-loader": "^4.12.19",
         "react-https-redirect": "^1.1.0",
+        "react-lineto": "^3.2.0",
         "react-modal": "^3.11.1",
         "react-scripts": "3.3.1",
         "react-sparkle": "^1.0.5",
