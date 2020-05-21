@@ -1,3 +1,27 @@
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+    height: 80%;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+  }
+
+
 /*
 =====================================================================
 *   Ceevee v1.0 Default Stylesheet
@@ -39,7 +63,6 @@ e. Others
 
 html,
 body,
-div,
 span,
 object,
 iframe,
@@ -113,7 +136,9 @@ video {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    overflow: hidden;
 }
+
 
 article,
 aside,
