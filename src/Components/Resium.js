@@ -254,8 +254,8 @@ const Resium = ({ data }) => {
                     <CameraFlyTo
                         destination={Cartesian3.fromDegrees(-90, 38, 30000000)}
                         orientation={{
-                            direction: new Cesium.Cartesian3(-0.04231243104240401, -0.20123236049443421, -0.97862924300734),
-                            up: new Cesium.Cartesian3(0, 0, 0)
+                            direction: new Cartesian3(-0.04231243104240401, -0.20123236049443421, -0.97862924300734),
+                            up: new Cartesian3(0, 0, 0)
                         }}
                         duration={1}
                         once={true}
