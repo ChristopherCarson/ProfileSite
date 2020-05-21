@@ -2,7 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Sparkle from 'react-sparkle';
 
-const AboutMe = ({
+const About = ({
     x,
     y,
     setLoad,
@@ -64,7 +64,7 @@ const AboutMe = ({
                                             className="button"
                                         >
                                             <i className="fa fa-download"></i>
-                                    Download Resume
+                                            <div style={{ width: '10px', display: 'inline-block' }} />Download Resume
                                 </a>
                                     </p>
                                 </div>
@@ -92,4 +92,4 @@ const AboutMe = ({
     );
 };
 
-export default AboutMe;
+export default About;

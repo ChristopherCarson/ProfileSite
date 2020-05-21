@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-const ResumeMe = ({
+const Resume = ({
     load,
     nav,
     data,
@@ -20,7 +20,7 @@ const ResumeMe = ({
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
-                        borderColor: 'rgba(255, 255, 255, .7)',
+                        borderColor: 'rgba(255, 255, 255, .0)',
                         borderWidth: 3,
                         borderStyle: 'solid',
                         position: 'absolute',
@@ -97,4 +97,4 @@ const ResumeMe = ({
     );
 };
 
-export default ResumeMe;
+export default Resume;

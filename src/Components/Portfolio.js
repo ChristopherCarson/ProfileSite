@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { Line } from 'react-lineto';
 
-const PortfolioMe = ({
-    x,
-    y,
+const Portfolio = ({
     setLoad,
     load,
-    dimensions,
-    updateCoordinates,
     nav,
     data,
 }) => {
@@ -26,7 +21,7 @@ const PortfolioMe = ({
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
-                        borderColor: 'rgba(255, 255, 255, .7)',
+                        borderColor: 'rgba(255, 255, 255, .0)',
                         borderWidth: 3,
                         borderStyle: 'solid',
                         position: 'absolute',
@@ -98,4 +93,4 @@ const PortfolioMe = ({
     );
 };
 
-export default PortfolioMe;
+export default Portfolio;

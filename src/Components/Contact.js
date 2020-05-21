@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import { Entity } from 'resium';
 import { Cartesian3, Color } from 'cesium';
 
-const ContactMe = ({
+const Contact = ({
     load,
     nav,
     data,
@@ -235,4 +235,4 @@ const ContactMe = ({
     );
 };
 
-export default ContactMe;
+export default Contact;

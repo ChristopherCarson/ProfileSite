@@ -2,11 +2,11 @@ import { Viewer, Camera, Entity, CameraFlyTo } from 'resium';
 import React, { useEffect, useState } from 'react';
 import Sparkle from 'react-sparkle';
 import { Cartesian3, Cartesian2, Color } from 'cesium';
-import AboutMe from './AboutMe';
-import ResumeMe from './ResumeMe';
-import PortfolioMe from './PortfolioMe';
+import About from './About';
+import Resume from './Resume';
+import Portfolio from './Portfolio';
 import References from './References';
-import ContactMe from './ContactMe';
+import Contact from './Contact';
 import Home from './Home';
 
 const Resium = ({ data }) => {
@@ -254,8 +254,8 @@ const Resium = ({ data }) => {
                     <CameraFlyTo
                         destination={Cartesian3.fromDegrees(-90, 38, 30000000)}
                         orientation={{
-                            direction: new Cesium.Cartesian3(-0.04231243104240401, -0.20123236049443421, -0.97862924300734),
-                            up: new Cesium.Cartesian3(0, 0, 0)
+                            direction: new Cartesian3(-0.04231243104240401, -0.20123236049443421, -0.97862924300734),
+                            up: new Cartesian3(0, 0, 0)
                         }}
                         duration={1}
                         once={true}
@@ -282,58 +282,42 @@ const Resium = ({ data }) => {
                         once={true}
                     />
                 )}
-                <AboutMe
+                <About
                     x={coordinates.x}
                     y={coordinates.y}
-                    dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.main}
                 />
                 <Home
-                    x={coordinates.x}
-                    y={coordinates.y}
-                    dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.main}
                 />
-                <ResumeMe
-                    x={coordinates.x}
-                    y={coordinates.y}
-                    dimensions={dimensions}
+                <Resume
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.resume}
                 />
-                <PortfolioMe
-                    dimensions={dimensions}
+                <Portfolio
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.portfolio}
                 />
                 <References
-                    dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.testimonials}
                 />
-                <ContactMe
-                    dimensions={dimensions}
+                <Contact
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
-                    updateCoordinates={updateCoordinates}
                     data={data.main}
                 />
             </Viewer>
