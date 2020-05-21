@@ -276,10 +276,11 @@ header .social {
     font-size: 30px;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
 }
-header .social li {
+.social li {
     display: inline-block;
     margin: 0 15px;
     padding: 0;
+    font-size: 30px;
 }
 header .social li a {
     color: #fff;
@@ -325,7 +326,7 @@ header .scrolldown a:hover {
 
 /* nav-wrap */
 #nav-wrap {
-    font: 12px 'opensans-bold', sans-serif;
+    font: 15px 'opensans-bold', sans-serif;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -450,7 +451,10 @@ ul#nav li a {
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
-
+.resume {
+    color: white;
+    background: rgb(255, 255, 255, 0);
+}
 #resume {
     background: #161415;
     padding-top: 90px;
@@ -494,7 +498,7 @@ ul#nav li a {
 
 .education,
 .work {
-    background: #161415;
+    background: rgb(255, 255, 255, 0);
     margin-bottom: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid #e8e8e8;
@@ -670,7 +674,7 @@ ul#nav li a {
     margin-bottom: 36px;
 }
 .portfolio-item .item-wrap {
-    background: #3b3f3f;
+    background: rgba(0, 0, 0, 0);
     overflow: hidden;
     position: relative;
 
@@ -905,7 +909,6 @@ call-to-action .button {
     background-attachment: fixed;
 
     position: relative;
-    min-height: 200px;
     width: 100%;
     overflow: hidden;
 }
@@ -946,18 +949,17 @@ call-to-action .button {
 #testimonials blockquote:before {
     content: none;
 }
-#testimonials blockquote p {
+ blockquote p {
     font-family: 'librebaskerville-italic', serif;
     padding: 0;
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 18px;
+    line-height: 22px;
     color: #fff;
 }
 #testimonials blockquote cite {
     display: block;
     font-size: 18px;
     font-style: normal;
-    line-height: 18px;
     color: #fff;
 }
 #testimonials blockquote cite:before {
@@ -1168,7 +1170,7 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
     color: #fff;
-    background-color: #9d4cf3;
+    background-color: #1326d8;
 }
 #contact button.submit {
     text-transform: uppercase;
@@ -1186,9 +1188,13 @@ call-to-action .button {
     color: #0d0d0d;
     background: #fff;
 }
-#contact span.required {
-    color: #9d4cf3;
+ span.required {
+    color: #ffffff;
     font-size: 13px;
+}
+.addressHeader {
+    color: #ffffff;
+    font-size: 22px; 
 }
 #message-warning,
 #message-success {

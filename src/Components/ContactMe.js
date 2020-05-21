@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Modal from 'react-modal';
+import { Entity } from 'resium';
+import { Cartesian3, Color } from 'cesium';
 
 const ContactMe = ({
-    x,
-    y,
-    setLoad,
     load,
-    dimensions,
-    updateCoordinates,
     nav,
     data,
 }) => {
@@ -78,6 +75,12 @@ const ContactMe = ({
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
         >
+            {nav === 'contact' && (
+                <Entity
+                    position={Cartesian3.fromDegrees(-120, 38)}
+                    point={{ pixelSize: 15, color: Color.BLUE }}
+                ></Entity>
+            )}
             {nav === 'contact' && load && (
                 <div
                     style={{
@@ -126,7 +129,7 @@ const ContactMe = ({
                             <div className="eight columns">
                                 <div>
                                     <label htmlFor="contactName">
-                                        Name <span className="required">*</span>
+                                        <span className="required">Name</span>
                                     </label>
                                     <input
                                         value={name}
@@ -140,7 +143,7 @@ const ContactMe = ({
 
                                 <div>
                                     <label htmlFor="contactEmail">
-                                        Email <span className="required">*</span>
+                                        <span className="required">Email</span>
                                     </label>
                                     <input
                                         value={email}
@@ -154,7 +157,7 @@ const ContactMe = ({
 
                                 <div>
                                     <label htmlFor="contactMessage">
-                                        Message <span className="required">*</span>
+                                        <span className="required">Message</span>
                                     </label>
                                     <textarea
                                         value={message}
@@ -209,7 +212,7 @@ const ContactMe = ({
 
                             <aside className="four columns footer-widgets">
                                 <div className="widget widget_contact">
-                                    <h4>Address and Phone</h4>
+                                    <h4 className="addressHeader">Address and Phone</h4>
                                     <p className="address">
                                         {data.name}
                                         <br />

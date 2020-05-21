@@ -7,8 +7,6 @@ const AboutMe = ({
     y,
     setLoad,
     load,
-    dimensions,
-    updateCoordinates,
     nav,
     data,
 }) => {
@@ -23,7 +21,6 @@ const AboutMe = ({
             >
                 {nav === 'about' && load && (
                     <div
-                        key="unique24873"
                         onClick={() => setLoad(false)}
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, .5)',
@@ -34,18 +31,45 @@ const AboutMe = ({
                             position: 'absolute',
                             left: x + 100 + 7,
                             top: '15%',
-                            height: '70%',
                             width: '35%',
                             borderRadius: 30,
                             padding: 20,
                         }}
                     >
-                        Cum enim magna parturient ac elementum, tincidunt tempor
-                        ac lectus platea placerat. Eros dis lectus. Ut aliquam.
-                        Porttitor risus mattis mauris lacus a, aliquam augue
-                        cras elementum! Adipiscing, vel ridiculus diam
-                        pellentesque sociis habitasse pellentesque, augue
-                        parturient sed elementum aenean. Tincidunt tristique.
+                        <div className="row">
+                            <p>{data.bio}</p>
+                            <div className="row">
+                                <div className="columns contact-details">
+                                    <p className="address">
+                                        <span>{data.name}</span>
+                                        <br />
+                                        <span>
+                                            {data.address.street}
+                                            <br />
+                                            {data.address.city} {data.address.state},{' '}
+                                            {data.address.zip}
+                                        </span>
+                                        <br />
+                                        <span>{data.phone}</span>
+                                        <br />
+                                        <span>{data.email}</span>
+                                    </p>
+                                </div>
+                                <div className="columns download">
+                                    <p>
+                                        <a
+                                            href={data.resumedownload}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="button"
+                                        >
+                                            <i className="fa fa-download"></i>
+                                    Download Resume
+                                </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 )}
                 {nav === 'about' && load && (

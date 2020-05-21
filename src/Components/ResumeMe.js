@@ -1,15 +1,8 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { Line } from 'react-lineto';
-import Sparkle from 'react-sparkle';
 
 const ResumeMe = ({
-    x,
-    y,
-    setLoad,
     load,
-    dimensions,
-    updateCoordinates,
     nav,
     data,
 }) => {
@@ -42,7 +35,7 @@ const ResumeMe = ({
                 >
                     <div className="row education">
                         <div className="three columns header-col">
-                            <h1>
+                            <h1 className="resume">
                                 <span>Education</span>
                             </h1>
                         </div>
@@ -52,11 +45,11 @@ const ResumeMe = ({
                                 <div className="twelve columns">
                                     {data.education.map(education => (
                                         <div key={education.school}>
-                                            <h3>{education.school}</h3>
+                                            <h3 className="resume">{education.school}</h3>
                                             <p className="info">
                                                 {education.degree}
                                             </p>
-                                            <p>{education.description}</p>
+                                            <p className="resume">{education.description}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -67,33 +60,33 @@ const ResumeMe = ({
                     <div className="row work">
                         <div className="three columns header-col">
                             <h1>
-                                <span>Work</span>
+                                <span className="resume">Work</span>
                             </h1>
                         </div>
 
                         <div className="nine columns main-col">
                             {data.work.map(work => (
                                 <div key={work.company}>
-                                    <h3>{work.company}</h3>
+                                    <h3 className="resume">{work.company}</h3>
                                     <p className="info">
                                         {work.title}
                                         <span>&bull;</span>{' '}
                                         <em className="date">{work.years}</em>
                                     </p>
-                                    <p>{work.description}</p>
+                                    <p className="resume">{work.description}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className="row skill">
                         <div className="three columns header-col">
-                            <h1>
+                            <h1 className="resume">
                                 <span>Skills</span>
                             </h1>
                         </div>
 
                         <div className="nine columns main-col">
-                            <h4>{data.skillmessage}</h4>
+                            <h4 className="resume">{data.skillmessage}</h4>
                         </div>
                     </div>
                 </div>

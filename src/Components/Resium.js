@@ -63,8 +63,6 @@ const Resium = ({ data }) => {
         if (coordinates.x === 0) updateCoordinates();
     });
 
-    console.log('spark', spark)
-
     return (
         <div id={'home'}>
             <div id={'newCredit'} style={{ display: 'none' }}></div>
@@ -284,20 +282,6 @@ const Resium = ({ data }) => {
                         once={true}
                     />
                 )}
-                {nav === 'references' && load && (
-                    <>
-                        <Entity
-                            position={Cartesian3.fromDegrees(-120, 38)}
-                            point={{ pixelSize: 25, color: Color.BLUE }}
-                        //onClick={() => setLoad(true)}
-                        ></Entity>
-                        <Entity
-                            position={Cartesian3.fromDegrees(-117, 32)}
-                            point={{ pixelSize: 25, color: Color.WHITE }}
-                        //onClick={() => setLoad(true)}
-                        ></Entity>
-                    </>
-                )}
                 <AboutMe
                     x={coordinates.x}
                     y={coordinates.y}
@@ -307,7 +291,6 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
-                    setSpark={setSpark}
                 />
                 <Home
                     x={coordinates.x}
@@ -318,7 +301,6 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
-                    setSpark={setSpark}
                 />
                 <ResumeMe
                     x={coordinates.x}
@@ -329,7 +311,6 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.resume}
-                    setSpark={setSpark}
                 />
                 <PortfolioMe
                     dimensions={dimensions}
@@ -338,7 +319,6 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.portfolio}
-                    setSpark={setSpark}
                 />
                 <References
                     dimensions={dimensions}
@@ -347,7 +327,6 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.testimonials}
-                    setSpark={setSpark}
                 />
                 <ContactMe
                     dimensions={dimensions}
@@ -356,12 +335,8 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
-                    setSpark={setSpark}
                 />
-
             </Viewer>
-
-
         </div>
     );
 };
