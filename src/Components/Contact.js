@@ -169,13 +169,13 @@ const Contact = ({
                                 </div>
 
                                 <div>
-                                    <h3 hidden={!error || (error && name !== '')}>
+                                    <h3 style={{ color: 'white' }} hidden={!error || (error && name !== '')}>
                                         Name is a required field.
                                 </h3>
-                                    <h3 hidden={!error || (error && email !== '')}>
+                                    <h3 style={{ color: 'white' }} hidden={!error || (error && email !== '')}>
                                         Email is a required field.
                                 </h3>
-                                    <h3
+                                    <h3 style={{ color: 'white' }}
                                         hidden={!error || (error && message !== '')}
                                     >
                                         Message is a required field.
