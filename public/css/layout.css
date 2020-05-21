@@ -95,11 +95,10 @@ body {
 }
 .shimmer {
     /* styling stuff */
-    font: 90px/1.1em 'opensans-bold', sans-serif;
-    margin: 0 auto 18px auto;
-    padding: 0 40px;
+    font: 60px/60px 'opensans-bold', sans-serif;
+    color: blue;
+    margin-bottom: 24px;
     text-align: center;
-    color: rgba(169, 24, 212, 0.9);
 }
 .shimmer {
     /* the shimmer magic */
@@ -109,7 +108,7 @@ body {
         right top,
         from(#222),
         to(#222),
-        color-stop(0.1, #fff)
+        color-stop(0.5, #fff)
     );
     background: -moz-gradient(
         linear,
@@ -310,7 +309,7 @@ header .scrolldown a {
     transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
-    color: #9d4cf3;
+    color: #2327df;
 }
 
 /* primary navigation
@@ -337,7 +336,7 @@ header .scrolldown a:hover {
     top: 0;
 }
 .opaque {
-    background-color: #333;
+    background-color: rgb(255, 255, 255, 0)
 }
 
 /* hide toggle button */
@@ -395,6 +394,19 @@ ul#nav li a {
 #about a:hover,
 #about a:focus {
     color: #11abb0;
+}
+
+#about h1 {
+ color: white;
+}
+#about  h3 {
+    color: white;
+    font-size: 18px;
+}
+
+#about  h4 {
+    color: white;
+    font-size: 26px;
 }
 
 #about h2 {

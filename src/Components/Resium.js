@@ -8,12 +8,12 @@ import PortfolioMe from './PortfolioMe';
 import References from './References';
 import ContactMe from './ContactMe';
 import Home from './Home';
-//import MyComponent from './Resize';
 
 const Resium = ({ data }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const [load, setLoad] = useState(false);
     const [nav, setNav] = useState('home');
+    const [spark, setSpark] = useState(2);
     const posit = new Cartesian2();
     let viewer;
 
@@ -63,6 +63,8 @@ const Resium = ({ data }) => {
         if (coordinates.x === 0) updateCoordinates();
     });
 
+    console.log('spark', spark)
+
     return (
         <div id={'home'}>
             <div id={'newCredit'} style={{ display: 'none' }}></div>
@@ -85,6 +87,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'home') setLoad(false);
                                 setNav('home');
+                                setSpark(1);
                             }}
                         >
                             Home
@@ -96,6 +99,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'about') setLoad(false);
                                 setNav('about');
+                                setSpark(1)
                             }}
                         >
                             About
@@ -107,6 +111,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'resume') setLoad(false);
                                 setNav('resume');
+                                setSpark(2);
                             }}
                         >
                             Resume
@@ -118,6 +123,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'works') setLoad(false);
                                 setNav('works');
+                                setSpark(2);
                             }}
                         >
                             Works
@@ -129,6 +135,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'references') setLoad(false);
                                 setNav('references');
+                                setSpark(0);
                             }}
                         >
                             References
@@ -140,6 +147,7 @@ const Resium = ({ data }) => {
                             onClick={() => {
                                 if (nav !== 'contact') setLoad(false);
                                 setNav('contact');
+                                setSpark(0);
                             }}
                         >
                             Contact
@@ -166,6 +174,58 @@ const Resium = ({ data }) => {
                 baseLayerPicker={false}
                 creditContainer={'newCredit'}
             >
+                <div style={{
+                    //backgroundColor: 'orange',
+                    width: '28%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    pointerEvents: 'none'
+                }}>
+                    {spark > 0 && (<Sparkle
+                        minSize={1}
+                        maxSize={8}
+                        flickerSpeed={'slowest'}
+                        count={10}
+                        fadeOutSpeed={20}
+                    />)}
+                </div>
+                <div style={{
+                    //backgroundColor: 'red',
+                    width: '45%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    left: '28%',
+                    pointerEvents: 'none'
+                }}>
+                    {spark > 1 && (<Sparkle
+                        minSize={1}
+                        maxSize={8}
+                        flickerSpeed={'slowest'}
+                        count={10}
+                        fadeOutSpeed={20}
+                    />)}
+                </div>
+                <div style={{
+                    //backgroundColor: 'yellow',
+                    width: '28%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                    pointerEvents: 'none'
+                }}>
+                    {spark > 0 && (<Sparkle
+                        minSize={1}
+                        maxSize={8}
+                        flickerSpeed={'slowest'}
+                        count={10}
+                        fadeOutSpeed={20}
+                        style={{ clipPath: 'circle(60px at center)' }}
+                    />)}
+                </div>
                 <Camera
                     onChange={() => updateCoordinates()}
                     onMoveEnd={() => setLoad(true)}
@@ -247,6 +307,7 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
+                    setSpark={setSpark}
                 />
                 <Home
                     x={coordinates.x}
@@ -257,6 +318,7 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
+                    setSpark={setSpark}
                 />
                 <ResumeMe
                     x={coordinates.x}
@@ -267,46 +329,34 @@ const Resium = ({ data }) => {
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.resume}
+                    setSpark={setSpark}
                 />
                 <PortfolioMe
-                    x={coordinates.x}
-                    y={coordinates.y}
                     dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.portfolio}
+                    setSpark={setSpark}
                 />
                 <References
-                    x={coordinates.x}
-                    y={coordinates.y}
                     dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.testimonials}
-                />
-                <References
-                    x={coordinates.x}
-                    y={coordinates.y}
-                    dimensions={dimensions}
-                    setLoad={setLoad}
-                    load={load}
-                    nav={nav}
-                    updateCoordinates={updateCoordinates}
-                    data={data.testimonials}
+                    setSpark={setSpark}
                 />
                 <ContactMe
-                    x={coordinates.x}
-                    y={coordinates.y}
                     dimensions={dimensions}
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
                     updateCoordinates={updateCoordinates}
                     data={data.main}
+                    setSpark={setSpark}
                 />
 
             </Viewer>
