@@ -225,11 +225,9 @@ const Contact = ({
                                 </div>
                             </aside>
                         </div>
-
                     </div>
                 </div>
-            )
-            }
+            )}
 
         </ReactCSSTransitionGroup >
     );
