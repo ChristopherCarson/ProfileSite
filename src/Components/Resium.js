@@ -49,6 +49,7 @@ const Resium = ({ data }) => {
 
     const updateCoordinates = () => {
         if (viewer) {
+            if (viewer.cesiumElement.scene._globe.tilesLoaded === true) console.log('loaded')
             setCoordinates(
                 window.Cesium.SceneTransforms.wgs84ToWindowCoordinates(
                     viewer.cesiumElement.scene,
