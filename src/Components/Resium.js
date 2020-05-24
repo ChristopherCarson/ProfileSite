@@ -12,6 +12,7 @@ import Home from './Home';
 const Resium = ({ data }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const [load, setLoad] = useState(false);
+    const [globe, setGlobe] = useState(false);
     const [nav, setNav] = useState('home');
     const [spark, setSpark] = useState(2);
     const posit = new Cartesian2();
@@ -49,7 +50,6 @@ const Resium = ({ data }) => {
 
     const updateCoordinates = () => {
         if (viewer) {
-            if (viewer.cesiumElement.scene._globe.tilesLoaded === true) window.alert('loaded')
             setCoordinates(
                 window.Cesium.SceneTransforms.wgs84ToWindowCoordinates(
                     viewer.cesiumElement.scene,
@@ -60,8 +60,13 @@ const Resium = ({ data }) => {
         }
     };
 
+
+
     useEffect(() => {
         if (coordinates.x === 0) updateCoordinates();
+        if (viewer) {
+            if (viewer.cesiumElement.scene._globe.tilesLoaded === true) setGlobe(true)
+        }
     });
 
     return (
@@ -216,6 +221,7 @@ const Resium = ({ data }) => {
                     right: 0,
                     pointerEvents: 'none'
                 }}>
+
                     {spark > 0 && (<Sparkle
                         minSize={1}
                         maxSize={8}
@@ -224,7 +230,19 @@ const Resium = ({ data }) => {
                         fadeOutSpeed={20}
                         style={{ clipPath: 'circle(60px at center)' }}
                     />)}
+
                 </div>
+
+                {globe === true && (<div style={{
+                    backgroundColor: 'yellow',
+                    width: '10%',
+                    height: '10%',
+                    position: 'absolute',
+                    top: '45%',
+                    right: '45%',
+                    pointerEvents: 'none'
+                }} />)}
+
                 <Camera
                     onChange={() => updateCoordinates()}
                     onMoveEnd={() => setLoad(true)}
