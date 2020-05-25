@@ -10,10 +10,10 @@ import Contact from './Contact';
 import Home from './Home';
 import LoadingBar from 'react-top-loading-bar';
 
-const Resium = ({ data }) => {
+
+const Resium = ({ data, globe, setGlobe }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const [load, setLoad] = useState(false);
-    const [globe, setGlobe] = useState(false);
     const [nav, setNav] = useState('home');
     const [spark, setSpark] = useState(2);
     const posit = new Cartesian2();
@@ -351,18 +351,6 @@ const Resium = ({ data }) => {
                     data={data.main}
                 />
             </Viewer>
-            {globe === false && (<div style={{
-                width: '30%',
-                height: '20%',
-                position: 'absolute',
-                top: '45%',
-                right: '35%',
-                pointerEvents: 'none',
-                textAlign: 'center',
-                fontSize: 26
-            }} >
-                <span>LOADING CESIUM GLOBE...</span>
-            </div>)}
         </div>
     );
 };

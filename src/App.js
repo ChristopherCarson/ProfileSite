@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactGA from 'react-ga';
 import Resium from './Components/Resium';
 import { hot } from 'react-hot-loader/root';
 import HttpsRedirect from 'react-https-redirect';
 import myData from './data/resumeData.json';
+import { Wave } from 'react-animated-text';
 
 window.Cesium.Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMDNhZDMzNC1mMjdmLTRhYmQtODAzNC1iYTk2YzI2MDNkMGMiLCJpZCI6MjI3NDYsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1ODE5ODA5NDl9.H6S3q-avHgqM5VFoXZEF5wkmoiF62tUaMMOYqP9YP8E';
@@ -11,11 +12,23 @@ window.Cesium.Ion.defaultAccessToken =
 const App = () => {
     ReactGA.initialize('UA-158362600-1');
     ReactGA.pageview(window.location.pathname);
+    const [globe, setGlobe] = useState(false);
 
     return (
         <HttpsRedirect>
             <div className="App" id="App">
-                <Resium data={myData} />
+                <Resium data={myData} globe={globe} setGlobe={setGlobe} />
+                {globe === false && (<div style={{
+                    width: '30%',
+                    position: 'absolute',
+                    top: '45%',
+                    right: '35%',
+                    pointerEvents: 'none',
+                    textAlign: 'center',
+                    fontSize: 20,
+                }} >
+                    <Wave text="LOADING CESIUM GLOBE..." effect="stretch" effectChange={1.5} />
+                </div>)}
             </div>
         </HttpsRedirect>
     );
