@@ -8,6 +8,7 @@ import Portfolio from './Portfolio';
 import References from './References';
 import Contact from './Contact';
 import Home from './Home';
+import LoadingBar from 'react-top-loading-bar';
 
 const Resium = ({ data }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
@@ -16,7 +17,7 @@ const Resium = ({ data }) => {
     const [nav, setNav] = useState('home');
     const [spark, setSpark] = useState(2);
     const posit = new Cartesian2();
-    let viewer;
+    let viewer, bar;
 
     function debounce(fn, ms) {
         let timer;
@@ -62,21 +63,35 @@ const Resium = ({ data }) => {
 
     useEffect(() => {
         if (coordinates.x === 0) updateCoordinates();
-    });
+        if (bar) bar.continuousStart();
+    }, []);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (viewer) {
-                console.log(viewer.cesiumElement.scene._globe.tilesLoaded)
-                if (viewer.cesiumElement.scene._globe.tilesLoaded === true) setGlobe(true)
-            }
-        }, 1000);
-        return () => clearInterval(interval);
+        if (globe === false) {
+            const interval = setInterval(() => {
+                if (viewer) {
+                    if (viewer.cesiumElement.scene._globe.tilesLoaded === true) {
+                        bar.complete()
+                        setGlobe(true)
+                    }
+                }
+            }, 1000);
+            return () => clearInterval(interval);
+        }
     });
+
+
 
     return (
         <div id={'home'}>
             <div id={'newCredit'} style={{ display: 'none' }}></div>
+            <LoadingBar
+                height={6}
+                color='blue'
+                ref={e => {
+                    bar = e;
+                }}
+            />
             <nav id="nav-wrap">
                 <a
                     className="mobile-btn"
@@ -304,12 +319,13 @@ const Resium = ({ data }) => {
                     nav={nav}
                     data={data.main}
                 />
-                {globe === true && (<Home
+                <Home
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
                     data={data.main}
-                />)}
+                    globe={globe}
+                />
                 <Resume
                     setLoad={setLoad}
                     load={load}
@@ -336,7 +352,6 @@ const Resium = ({ data }) => {
                 />
             </Viewer>
             {globe === false && (<div style={{
-                //backgroundColor: 'red',
                 width: '30%',
                 height: '20%',
                 position: 'absolute',

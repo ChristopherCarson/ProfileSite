@@ -6,6 +6,7 @@ const Home = ({
     load,
     nav,
     data,
+    globe
 }) => {
     return (
         <div>
@@ -16,7 +17,7 @@ const Home = ({
                 transitionEnterTimeout={500}
                 transitionLeaveTimeout={500}
             >
-                {nav === 'home' && load && (
+                {nav === 'home' && load && globe && (
                     <div
                         id="about"
                         onClick={() => setLoad(false)}
