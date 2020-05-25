@@ -60,8 +60,6 @@ const Resium = ({ data }) => {
         }
     };
 
-
-
     useEffect(() => {
         if (coordinates.x === 0) updateCoordinates();
     });
@@ -306,12 +304,12 @@ const Resium = ({ data }) => {
                     nav={nav}
                     data={data.main}
                 />
-                <Home
+                {globe === true && (<Home
                     setLoad={setLoad}
                     load={load}
                     nav={nav}
                     data={data.main}
-                />
+                />)}
                 <Resume
                     setLoad={setLoad}
                     load={load}
@@ -337,24 +335,19 @@ const Resium = ({ data }) => {
                     data={data.main}
                 />
             </Viewer>
-            <div style={{
-                backgroundColor: 'red',
-                width: '10%',
-                height: '10%',
+            {globe === false && (<div style={{
+                //backgroundColor: 'red',
+                width: '30%',
+                height: '20%',
                 position: 'absolute',
                 top: '45%',
                 right: '35%',
-                pointerEvents: 'none'
-            }} />
-            {globe === true && (<div style={{
-                backgroundColor: 'yellow',
-                width: '10%',
-                height: '10%',
-                position: 'absolute',
-                top: '45%',
-                right: '55%',
-                pointerEvents: 'none'
-            }} />)}
+                pointerEvents: 'none',
+                textAlign: 'center',
+                fontSize: 26
+            }} >
+                <span>LOADING CESIUM GLOBE...</span>
+            </div>)}
         </div>
     );
 };
