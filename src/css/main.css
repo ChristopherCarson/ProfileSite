@@ -743,10 +743,6 @@ ul#nav li a {
 #about a:visited {
     color: #fff;
 }
-#about a:focus,
-#about a:hover {
-    color: #11abb0;
-}
 #about h1 {
     color: #fff;
 }
