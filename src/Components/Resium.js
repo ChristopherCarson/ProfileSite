@@ -33,7 +33,7 @@ const Resium = ({ data }) => {
         height: window.innerHeight,
         width: window.innerWidth
     });
-    React.useEffect(() => {
+    useEffect(() => {
         const debouncedHandleResize = debounce(function handleResize() {
             setDimensions({
                 height: window.innerHeight,
@@ -64,9 +64,16 @@ const Resium = ({ data }) => {
 
     useEffect(() => {
         if (coordinates.x === 0) updateCoordinates();
-        if (viewer) {
-            if (viewer.cesiumElement.scene._globe.tilesLoaded === true) setGlobe(true)
-        }
+    });
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (viewer) {
+                console.log(viewer.cesiumElement.scene._globe.tilesLoaded)
+                if (viewer.cesiumElement.scene._globe.tilesLoaded === true) setGlobe(true)
+            }
+        }, 1000);
+        return () => clearInterval(interval);
     });
 
     return (
