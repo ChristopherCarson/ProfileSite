@@ -87,7 +87,7 @@ const Resium = ({ data, globe, setGlobe }) => {
             <div id={'newCredit'} style={{ display: 'none' }}></div>
             <LoadingBar
                 height={6}
-                color='blue'
+                color='#0b08d6'
                 ref={e => {
                     bar = e;
                 }}

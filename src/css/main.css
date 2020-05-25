@@ -684,11 +684,8 @@ header .social {
     padding: 0;
     font-size: 30px;
 }
-header .social li a {
-    color: #fff;
-}
-header .social li a:hover {
-    color: #9d4cf3;
+.social li a:hover {
+    color: #1815d3 !important;
 }
 #nav-wrap a,
 #nav-wrap li,
@@ -972,7 +969,7 @@ blockquote p {
 }
 #contact a,
 #contact a:visited {
-    color: #9d4cf3;
+    color: #1a17f0;
 }
 #contact a:focus,
 #contact a:hover {
@@ -1022,7 +1019,6 @@ blockquote p {
     margin: 12px 0;
     color: #ebeeee;
     display: inline-block;
-    float: left;
     width: 26%;
 }
 #contact input,
@@ -1152,5 +1148,5 @@ footer .social-links li:first-child {
     border-radius: 100%;
 }
 #go-top a:hover {
-    background-color: #9d4cf3;
+    background-color: #0b08d6;
 }

@@ -22,10 +22,11 @@ const App = () => {
             <div className="App" id="App">
                 <Resium data={myData} globe={globe} setGlobe={setGlobe} />
                 {globe === false && (<div style={{
-                    width: '30%',
+                    width: 280,
                     position: 'absolute',
                     top: '45%',
-                    right: '35%',
+                    left: '50%',
+                    marginLeft: -140,
                     pointerEvents: 'none',
                     textAlign: 'center',
                     fontSize: 20,
