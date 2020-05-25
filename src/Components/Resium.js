@@ -233,16 +233,6 @@ const Resium = ({ data }) => {
 
                 </div>
 
-                {globe === true && (<div style={{
-                    backgroundColor: 'yellow',
-                    width: '10%',
-                    height: '10%',
-                    position: 'absolute',
-                    top: '45%',
-                    right: '45%',
-                    pointerEvents: 'none'
-                }} />)}
-
                 <Camera
                     onChange={() => updateCoordinates()}
                     onMoveEnd={() => setLoad(true)}
@@ -340,6 +330,24 @@ const Resium = ({ data }) => {
                     data={data.main}
                 />
             </Viewer>
+            <div style={{
+                backgroundColor: 'red',
+                width: '10%',
+                height: '10%',
+                position: 'absolute',
+                top: '45%',
+                right: '35%',
+                pointerEvents: 'none'
+            }} />
+            {globe === true && (<div style={{
+                backgroundColor: 'yellow',
+                width: '10%',
+                height: '10%',
+                position: 'absolute',
+                top: '45%',
+                right: '55%',
+                pointerEvents: 'none'
+            }} />)}
         </div>
     );
 };
