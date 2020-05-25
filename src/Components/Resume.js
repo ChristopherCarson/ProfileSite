@@ -92,7 +92,6 @@ const Resume = ({
                 </div>
             )
             }
-
         </ReactCSSTransitionGroup >
     );
 };

@@ -26,7 +26,7 @@ const Home = ({
                             color: 'white',
                             position: 'absolute',
                             left: '15%',
-                            top: '15%',
+                            top: '10%',
                             height: '80%',
                             width: '70%',
                             borderRadius: 30,
@@ -34,6 +34,7 @@ const Home = ({
                             textAlign: 'center',
                         }}
                     >
+                        <br></br>
                         <h1>Christoper Carson</h1>
                         <br></br>
                         <h2 className="shimmer">{data.occupation}</h2>
