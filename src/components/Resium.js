@@ -15,7 +15,7 @@ const Resium = ({ data, globe, setGlobe }) => {
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const [load, setLoad] = useState(false);
     const [nav, setNav] = useState('home');
-    const [spark, setSpark] = useState(2);
+    const [spark, setSpark] = useState(1);
     const posit = new Cartesian2();
     let viewer, bar;
 

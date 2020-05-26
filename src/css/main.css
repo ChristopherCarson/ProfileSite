@@ -648,16 +648,10 @@ body {
     background: #000;
 }
 .shimmer {
-    font: 60px/60px opensans-bold, sans-serif;
-    color: #00f;
-    margin-bottom: 24px;
-    text-align: center;
-}
-.shimmer {
-    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-    background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
-    -webkit-background-size: 125px 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgb(14, 33, 199)), to(rgb(14, 33, 199)), color-stop(.75, rgb(255, 255, 255)));
+    background: -moz-gradient(linear, left top, right top, from(rgb(14, 33, 199)), to(rgb(14, 33, 199)), color-stop(.75, rgb(255, 255, 255)));
+    background: gradient(linear, left top, right top, from(rgb(14, 33, 199)), to(rgb(14, 33, 199)), color-stop(.75, rgb(255, 255, 255)));
+    -webkit-background-size: 125px 100px;
     -moz-background-size: 125px 100%;
     background-size: 125px 100%;
     -webkit-background-clip: text;
@@ -667,57 +661,56 @@ body {
     -moz-animation-name: shimmer;
     -webkit-animation-name: shimmer;
     animation-name: shimmer;
-    -webkit-animation-duration: 3s;
-    -moz-animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-color: #222;
+    background-color: rgb(26, 2, 241);
 }
 @-moz-keyframes shimmer {
-    0% {
-        background-position: top left;
-    }
-    100% {
-        background-position: top right;
-    }
+  0% {
+    background-position: -200px 0px;
+}
+100% {
+    background-position: 1100px 0px;
+}
 }
 @-webkit-keyframes shimmer {
-    0% {
-        background-position: top left;
-    }
-    100% {
-        background-position: top right;
-    }
+  0% {
+    background-position: -200px 0px;
+}
+100% {
+    background-position: 1100px 0px;
+}
 }
 @-o-keyframes shimmer {
-    0% {
-        background-position: top left;
-    }
-    100% {
-        background-position: top right;
-    }
+  0% {
+    background-position: -200px 0px;
+}
+100% {
+    background-position: 1100px 0px;
+}
 }
 @-ms-keyframes shimmer {
-    0% {
-        background-position: top left;
-    }
-    100% {
-        background-position: top right;
-    }
+  0% {
+      background-position: -200px 0px;
+  }
+  100% {
+      background-position: 1100px 0px;
+  }
 }
 @keyframes shimmer {
-    0% {
-        background-position: top left;
-    }
-    100% {
-        background-position: top right;
-    }
+  0% {
+      background-position: -200px 0px;
+  }
+  100% {
+      background-position: 1100px 0px;
+  }
 }
 
 header:before {
@@ -810,7 +803,7 @@ ul#nav li a {
 }
 #about h2 {
     font: 60px/60px opensans-bold, sans-serif;
-    color: #00f;
+    color: rgba(36, 26, 173, 0.2);
     margin-bottom: 24px;
 }
 #about p {

@@ -42,7 +42,7 @@ const App = () => {
                     alignContent: 'center',
                     marginLeft: -100
                 }} >
-                    <img style={{ width: 100, opacity: 0, marginLeft: 52, marginTop: 15 }} alt="" src="images/skills/aws.png" />
+                    <img style={{ width: 100, opacity: 0, marginLeft: 48, marginTop: 15 }} alt="" src="images/skills/aws.png" />
                     <img style={{ width: 200, opacity: 0, marginTop: 15 }} alt="" src="images/skills/cesium.png" />
                     <img style={{ width: 200, opacity: 0 }} alt="" src="images/skills/react.png" />
                 </div>)}
