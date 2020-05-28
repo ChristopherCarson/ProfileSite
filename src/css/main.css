@@ -1,9 +1,38 @@
 
+
+.glow {
+    text-shadow: 1px 1px 2px rgb(29, 10, 197), 0 0 10px blue, 0 0 5px rgb(17, 17, 218);
+  }
+
+
 /*
   ---------------------------------------------------
   Animations for slide in left, slide out right
   ---------------------------------------------------
   */
+
+  .drop-appear,
+  .drop-enter {
+      opacity: 0;
+      transform: translateY(-250px);
+  }
+  .drop-appear.drop-appear-active,
+  .drop-enter.drop-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 0.5s;
+  }
+  
+  .drop-leave {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  
+  .drop-leave.drop-leave-active {
+      opacity: 0;
+      transform: translateY(-250px);
+      transition: 0.5s;
+  }
 
   .slide-appear,
   .slide-enter {
@@ -179,19 +208,21 @@
    
 
    ::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
     height: 80%;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: rgb(29, 8, 221);
     border-radius: 10px;
+    box-shadow: inset 0 0 15px rgb(2, 0, 19);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #fff;
+    box-shadow: inset 0 0 15px rgb(28, 3, 247);
 }
 address,
 aside,
@@ -879,11 +910,12 @@ ul#nav li a {
     margin-bottom: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid #e8e8e8;
+    margin-top: 30px;
     color: #cfd4d8;
 }
 #resume .info {
     font: 16px/24px librebaskerville-italic, serif;
-    color: #ecf2f7;
+    color: #0c1cf3;
     margin-bottom: 18px;
     margin-top: 9px;
 }

@@ -9,7 +9,7 @@ const Resume = ({
 
     return (
         <ReactCSSTransitionGroup
-            transitionName="slide"
+            transitionName="drop"
             transitionAppear={true}
             transitionAppearTimeout={500}
             transitionEnterTimeout={500}
@@ -33,10 +33,33 @@ const Resume = ({
                         overflowX: 'hidden'
                     }}
                 >
+
+                    <div className="row work">
+                        <div className="three columns header-col">
+                            <h1>
+                                <span className="resume glow">Work</span>
+                            </h1>
+                        </div>
+
+                        <div className="nine columns main-col">
+                            {data.work.map(work => (
+                                <div key={work.company}>
+                                    <h3 className="resume">{work.company}</h3>
+                                    <p className="info">
+                                        {work.title}{' '}
+                                        <span>&bull;</span>{' '}
+                                        <em className="date">{work.years}</em>
+                                    </p>
+                                    <p className="resume">{work.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="row education">
                         <div className="three columns header-col">
                             <h1 className="resume">
-                                <span>Education</span>
+                                <span className="glow">Education</span>
                             </h1>
                         </div>
 
@@ -57,36 +80,15 @@ const Resume = ({
                         </div>
                     </div>
 
-                    <div className="row work">
-                        <div className="three columns header-col">
-                            <h1>
-                                <span className="resume">Work</span>
-                            </h1>
-                        </div>
-
-                        <div className="nine columns main-col">
-                            {data.work.map(work => (
-                                <div key={work.company}>
-                                    <h3 className="resume">{work.company}</h3>
-                                    <p className="info">
-                                        {work.title}
-                                        <span>&bull;</span>{' '}
-                                        <em className="date">{work.years}</em>
-                                    </p>
-                                    <p className="resume">{work.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
                     <div className="row skill">
                         <div className="three columns header-col">
-                            <h1 className="resume">
+                            <h1 className="resume glow">
                                 <span>Skills</span>
                             </h1>
                         </div>
 
                         <div className="nine columns main-col">
-                            <h4 className="resume">{data.skillmessage}</h4>
+                            <span className="resume">{data.skillmessage}</span>
                         </div>
                     </div>
                 </div>

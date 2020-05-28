@@ -43,7 +43,7 @@ const Portfolio = ({
                     >
                         <div className="row">
                             <div className="twelve columns collapsed">
-                                <h2 style={{ color: 'white', textAlign: 'center' }}>Personal Projects</h2>
+                                <h2 style={{ color: 'white', textAlign: 'center', marginTop: 30 }}>Personal Projects</h2>
                                 <br />
                                 <br />
                                 <div

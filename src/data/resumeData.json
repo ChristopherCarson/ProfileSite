@@ -4,8 +4,8 @@
         "occupation": "Remote Full Stack Developer",
         "description": "Passionate about clean code • Actively looking for Junior level remote developement work",
         "image": "me.png",
-        "bio": "Located in Northern CA, I'm currently completing my Master's in CS. I love building systems from the ground up. I can't imagine a more rewarding career.",
-        "contactmessage": "I look forward to hearing from you!",
+        "bio": "My homebase is in the foothills of beautiful Northern CA. I love working remotely and being challenged by code. Please reach out to me with any employment oppurtunities.",
+        "contactmessage": "Thanks for reaching out!",
         "email": "Email on resume",
         "phone": "209-559-1902",
         "address": {
@@ -43,15 +43,8 @@
         "skillmessage": "Git, React.js, Redux, Jest, Enzyme, JavaScript (ES6), Babel, Typescript, Leaflet, Cesium, OpenCV, GraphQL PostgreSQL, MySQL, Linux, Java and Python. Experienced with the agile development process and being part of a fully distributed team.",
         "education": [
             {
-                "school": "Georgia Institute of Technology",
-                "degree": "MS Computer Science – Interactive Intelligence",
-                "graduated": "",
-                "description": "In Progress"
-            },
-            {
                 "school": "California State University Monterey Bay",
-                "degree": "BS Computer Science - Software Engineering",
-                "graduated": "",
+                "degree": "BS Computer Science Software Engineering - 2019",
                 "description": "3.9 GPA - Received award for Most Innovative Capstone of graduating class"
             }
         ],
