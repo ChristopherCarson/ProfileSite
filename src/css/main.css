@@ -666,11 +666,12 @@ input[type="checkbox"] {
 .text-right {
     text-align: right !important;
 }
-ul#nav li a:active {
+ul#nav li p:active {
     background-color: transparent !important;
 }
-ul#nav li.current a {
+ul#nav li.current p {
     color: #00f;
+    font-weight: bold;
 }
 body {
     background: #0f0f0f;
@@ -798,7 +799,7 @@ ul#nav li {
     height: 48px;
     display: inline-block;
 }
-ul#nav li a {
+ul#nav li p {
     display: inline-block;
     padding: 8px 13px;
     line-height: 32px;

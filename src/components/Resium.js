@@ -106,8 +106,8 @@ const Resium = ({ data, globe, setGlobe }) => {
 
                 <ul id="nav" className="nav">
                     <li className={nav === 'home' ? 'current' : 'none'}>
-                        <a
-                            href="#home"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'home') setLoad(false);
                                 setNav('home');
@@ -115,11 +115,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Home
-                        </a>
+                        </p>
                     </li>
                     <li className={nav === 'about' ? 'current' : 'none'}>
-                        <a
-                            href="#about"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'about') setLoad(false);
                                 setNav('about');
@@ -127,11 +127,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             About
-                        </a>
+                        </p>
                     </li>
                     <li className={nav === 'resume' ? 'current' : 'none'}>
-                        <a
-                            href="#resume"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'resume') setLoad(false);
                                 setNav('resume');
@@ -139,11 +139,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Resume
-                        </a>
+                        </p>
                     </li>
                     <li className={nav === 'works' ? 'current' : 'none'}>
-                        <a
-                            href="#works"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'works') setLoad(false);
                                 setNav('works');
@@ -151,11 +151,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Works
-                            </a>
+                            </p>
                     </li>
                     <li className={nav === 'references' ? 'current' : 'none'}>
-                        <a
-                            href="#references"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'references') setLoad(false);
                                 setNav('references');
@@ -163,11 +163,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             References
-                        </a>
+                        </p>
                     </li>
                     <li className={nav === 'contact' ? 'current' : 'none'}>
-                        <a
-                            href="#contact"
+                        <p
+                            style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'contact') setLoad(false);
                                 setNav('contact');
@@ -175,7 +175,7 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Contact
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </nav>

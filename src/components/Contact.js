@@ -86,15 +86,15 @@ const Contact = ({
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
-                        borderColor: 'rgba(255, 255, 255, .7)',
-                        borderWidth: 3,
-                        borderStyle: 'solid',
+                        //borderColor: 'rgba(255, 255, 255, .7)',
+                        //borderWidth: 3,
+                        //borderStyle: 'solid',
                         position: 'absolute',
                         left: '15%',
                         top: '10%',
                         height: '90%',
                         width: '70%',
-                        borderRadius: 30,
+                        borderRadius: 20,
                         padding: 20,
                         overflowX: 'hidden'
                     }}
