@@ -35,7 +35,7 @@ const Home = ({
                         }}
                     >
                         <br></br>
-                        <h1>Christoper Carson</h1>
+                        <h1>{data.name}</h1>
                         <br></br>
                         <h2 className="shimmer">{data.occupation}</h2>
                         <h3>{data.description}</h3>
