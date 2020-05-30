@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { motion } from "framer-motion"
 
 const Home = ({
     setLoad,
@@ -8,6 +9,33 @@ const Home = ({
     data,
     globe
 }) => {
+    const [x, setX] = useState(window.innerWidth * 1.5);
+    const [y, setY] = useState(window.innerHeight * .5);
+    const [rotate, setRotate] = useState(-150);
+    const [scale, setScale] = useState(1.5);
+    const [opacity, setOpacity] = useState(1);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (opacity === 1) {
+                setX(-200)
+                setY(window.innerHeight * .05)
+                setScale(1.5)
+                setRotate(0)
+                setOpacity(0)
+
+            } else if (opacity === 0) {
+                setX(window.innerWidth * 1.5)
+                setY(window.innerHeight * .5)
+                setScale(1)
+                setRotate(-150)
+                setOpacity(1)
+            }
+
+        }, 8000);
+        return () => clearInterval(interval);
+    });
+
     return (
         <div>
             <ReactCSSTransitionGroup
@@ -53,6 +81,18 @@ const Home = ({
                     </div>
                 )}
             </ReactCSSTransitionGroup>
+            <motion.div
+                style={{ position: 'absolute', width: 30, top: window.innerHeight * .2, left: -200, opacity: opacity }}
+                animate={{
+                    x: globe ? x : -200,
+                    y: globe ? y : window.innerHeight * .02,
+                    scale: globe ? scale : 1.5,
+                    rotate: globe ? rotate : 0
+                }}
+                transition={{ duration: 15 }}
+            >
+                <img alt="" src="images/sat.png" />
+            </motion.div >
         </div >
     );
 };

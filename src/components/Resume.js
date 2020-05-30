@@ -51,6 +51,7 @@ const Resume = ({
                                         <em className="date">{work.years}</em>
                                     </p>
                                     <p className="resume">{work.description}</p>
+                                    <br></br>
                                 </div>
                             ))}
                         </div>
