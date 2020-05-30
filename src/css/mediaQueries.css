@@ -1,14 +1,17 @@
 @media only screen and (max-width: 1024px) {
+    .mediaInfo::after {
+        content: "1024px";
+    }
     .shimmer {
-        font: 80px/1.1em opensans-bold, sans-serif;
-        letter-spacing: -1px;
-        margin: 0 auto 12px auto;
+        font: 45px/1.1em opensans-bold, sans-serif;
     }
 }
 @media only screen and (max-width: 900px) {
+    .mediaInfo::after {
+        content: "900px";
+    }
     .shimmer {
-        font: 78px/1.1em opensans-bold, sans-serif;
-        letter-spacing: -1px;
+        font: 40px/1.1em opensans-bold, sans-serif;
     }
     #nav-wrap {
         font: 11px opensans-bold, sans-serif;
@@ -44,8 +47,20 @@
     #contact .section-head p.lead {
         font: 17px/33px opensans-light, sans-serif;
     }
+    .s-bgrid-quarters [class*="column"] {
+        width: 25%;
+    }
+    .s-bgrid-thirds [class*="column"] {
+        width: 33.33333%;
+    }
 }
 @media only screen and (max-width: 767px) {
+    .mediaInfo::after {
+        content: "767px";
+    }
+    .shimmer {
+        font: 30px/1.1em opensans-bold, sans-serif;
+    }
     #nav-wrap {
         font: 12px opensans-bold, sans-serif;
         background: 0 0 !important;
@@ -121,7 +136,7 @@
         border: none;
     }
     .shimmer {
-        font: 68px/1.1em opensans-bold, sans-serif;
+        font: 40px/1.1em opensans-bold, sans-serif;
     }
     header .social {
         margin: 18px 0 24px 0;
@@ -233,15 +248,43 @@
         font-size: 18px;
         line-height: 54px;
     }
+    .row {
+        width: 460px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .columns {
+        width: auto !important;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 30px;
+    }
+    .row .row {
+        width: auto;
+        max-width: none;
+        margin: 0 -30px;
+    }
+    [class*="column"] + [class*="column"]:last-child {
+        float: none;
+    }
+    [class*="bgrid"] [class*="column"] + [class*="column"]:last-child {
+        float: none;
+    }
 }
 @media only screen and (max-width: 480px) {
+    .mediaInfo::after {
+        content: "480px";
+    }
     #nav-wrap ul#nav {
         width: auto;
         float: none;
     }
     .shimmer {
-        font: 40px/1.1em opensans-bold, sans-serif;
-        margin: 0 auto 24px auto;
+        font: 30px/1.1em opensans-bold, sans-serif;
+    }
+    .row {
+        width: auto;
     }
     header .social {
         font-size: 20px;
