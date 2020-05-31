@@ -35,11 +35,10 @@ const App = () => {
                 </div>)}
                 {globe === false && (<div id="cf4a" style={{
                     width: '30%',
-                    position: 'absolute',
+                    position: 'relative',
                     top: '25%',
-                    left: '50%',
+                    left: window.innerWidth < 900 ? '60%' : '50%',
                     pointerEvents: 'none',
-                    alignContent: 'center',
                     marginLeft: -100
                 }} >
                     <img style={{ width: 100, opacity: 0, marginLeft: 48, marginTop: 15 }} alt="" src="images/skills/aws.png" />

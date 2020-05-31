@@ -18,6 +18,7 @@ const Portfolio = ({
         >
             {nav === 'works' && load && (
                 <div
+                    id="works"
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
@@ -25,10 +26,10 @@ const Portfolio = ({
                         borderWidth: 3,
                         borderStyle: 'solid',
                         position: 'absolute',
-                        left: '15%',
+                        left: window.innerWidth < 900 ? '0%' : '15%',
                         top: '10%',
                         height: '90%',
-                        width: '70%',
+                        width: window.innerWidth < 900 ? '100%' : '70%',
                         borderRadius: 30,
                         padding: 20,
                         overflowX: 'hidden'

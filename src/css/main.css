@@ -130,7 +130,7 @@ em {
     font: 15px/30px opensans-italic, sans-serif;
 }
 blockquote {
-    margin: 30px 0;
+    margin: 5px 0;
     padding-left: 40px;
     position: relative;
 }
@@ -773,82 +773,68 @@ ul#nav li p {
     -ms-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
-#about {
+#home {
     background: #2b2b2b;
     padding-top: 96px;
     padding-bottom: 66px;
     overflow: hidden;
 }
-#about a,
-#about a:visited {
+#home a,
+#home a:visited {
     color: #fff;
 }
-#about h1 {
+#home h1 {
+    font-size: 38px;
     color: #fff;
 }
-#about h3 {
+#home h3 {
     color: #fff;
     font-size: 18px;
 }
-#about h4 {
+#home h4 {
     color: #fff;
     font-size: 26px;
 }
-#about h2 {
+#home h2 {
     color: rgba(36, 26, 173, 0.2);
 }
-#about p {
+#home p {
     line-height: 30px;
     color: #fff;
 }
-#about .contact-details {
+#home .contact-details {
     width: 41.66667%;
 }
-#about .download {
-    width: 58.33333%;
-    padding-top: 6px;
+
+#about p {
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
 }
-#about .main-col {
-    padding-right: 5%;
+#about {
+    font-size: 20px;
 }
-#about .download .button {
-    margin-top: 6px;
-    background: #444;
+#about a {
+    float: right;
 }
 #about .download .button:hover {
     background: #fff;
-    color: #2b2b2b;
+    color: #2012e0;
 }
 #about .download .button i {
     margin-right: 15px;
     font-size: 20px;
 }
-.resume {
-    color: #fff;
-    background: rgb(255, 255, 255, 0);
-}
-#resume {
-    background: #161415;
-    padding-top: 90px;
-    padding-bottom: 72px;
-    overflow: hidden;
-}
-#resume a,
-#resume a:visited {
-    color: #1814e9;
-}
-#resume a:focus,
-#resume a:hover {
-    color: #313131;
-}
+
 #resume h1 {
-    font: 18px/24px opensans-bold, sans-serif;
+    font: 25px/24px opensans-bold, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 #resume h1 span {
     border-bottom: 3px solid #1725db;
-    padding-bottom: 6px;
     color: #fff;
 }
 #resume h3 {
@@ -858,12 +844,7 @@ ul#nav li p {
 #resume h4 {
     color: #fff;
 }
-#resume .header-col {
-    padding-top: 9px;
-}
-#resume .main-col {
-    padding-right: 10%;
-}
+
 .education,
 .work {
     background: rgb(255, 255, 255, 0);
@@ -874,8 +855,8 @@ ul#nav li p {
     color: #cfd4d8;
 }
 #resume .info {
-    font: 16px/24px librebaskerville-italic, serif;
-    color: #0c1cf3;
+    font: 18px/24px librebaskerville-italic, serif;
+    color: #999ff5;
     margin-bottom: 18px;
     margin-top: 9px;
 }
@@ -941,58 +922,7 @@ ul#nav li p {
     -moz-opacity: 1;
 }
 
-#testimonials h1 {
-    font: 18px/24px opensans-bold, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-}
-#testimonials h1 span {
-    display: none;
-}
-#testimonials .header-col {
-    padding-top: 9px;
-}
-#testimonials .header-col h1:before {
-    font-family: FontAwesome;
-    content: "\f10d";
-    padding-right: 10px;
-    font-size: 72px;
-    line-height: 72px;
-    text-align: left;
-    float: left;
-    color: #fff;
-}
-#testimonials blockquote {
-    margin: 0 0 30px 0;
-    padding-left: 0;
-    position: relative;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-}
-#testimonials blockquote:before {
-    content: none;
-}
-blockquote p {
-    font-family: librebaskerville-italic, serif;
-    padding: 0;
-    font-size: 18px;
-    line-height: 22px;
-    color: #fff;
-}
-#testimonials blockquote cite {
-    display: block;
-    font-size: 18px;
-    font-style: normal;
-    color: #fff;
-}
-#testimonials blockquote cite:before {
-    content: "\2014 \0020";
-}
-#testimonials blockquote cite a,
-#testimonials blockquote cite a:visited {
-    color: #8b9798;
-    border: none;
-}
+
 #contact {
     background: #191919;
     padding-top: 96px;

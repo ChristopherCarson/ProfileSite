@@ -86,14 +86,11 @@ const Contact = ({
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
-                        //borderColor: 'rgba(255, 255, 255, .7)',
-                        //borderWidth: 3,
-                        //borderStyle: 'solid',
                         position: 'absolute',
-                        left: '15%',
+                        left: window.innerWidth < 900 ? '0%' : '15%',
                         top: '10%',
                         height: '90%',
-                        width: '70%',
+                        width: window.innerWidth < 900 ? '100%' : '70%',
                         borderRadius: 20,
                         padding: 20,
                         overflowX: 'hidden'

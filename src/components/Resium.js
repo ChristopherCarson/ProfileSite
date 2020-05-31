@@ -351,16 +351,17 @@ const Resium = ({ data, globe, setGlobe }) => {
                     data={data.main}
                 />
             </Viewer>
+
             {/** 
-            <div className={"mediaInfo"} style={{
-                width: 100,
-                height: 20,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                pointerEvents: 'none'
-            }}></div>
-            */}
+                <div className={"mediaInfo"} style={{
+                    width: 100,
+                    height: 20,
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    pointerEvents: 'none'
+                }}></div>
+                */}
 
         </div>
     );

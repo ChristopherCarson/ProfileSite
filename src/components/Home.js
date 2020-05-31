@@ -9,9 +9,9 @@ const Home = ({
     data,
     globe
 }) => {
-    const [x, setX] = useState(window.innerWidth * 1.5);
-    const [y, setY] = useState(window.innerHeight * .5);
-    const [rotate, setRotate] = useState(-150);
+    const [x, setX] = useState(-200);
+    const [y, setY] = useState(window.innerHeight * .02);
+    const [rotate, setRotate] = useState(0);
     const [scale, setScale] = useState(1.5);
     const [opacity, setOpacity] = useState(1);
 
@@ -47,7 +47,7 @@ const Home = ({
             >
                 {nav === 'home' && load && globe && (
                     <div
-                        id="about"
+                        id="home"
                         onClick={() => setLoad(false)}
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, .75)',

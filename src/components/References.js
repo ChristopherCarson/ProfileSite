@@ -32,6 +32,7 @@ const References = ({
                 )}
                 {nav === 'references' && load && (
                     <div
+                        id="reference1"
                         onClick={() => setLoad(false)}
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, .5)',
@@ -42,7 +43,6 @@ const References = ({
                             position: 'absolute',
                             left: '10%',
                             top: '15%',
-                            //height: '70%',
                             width: '35%',
                             borderRadius: 30,
                             padding: 20,
@@ -56,7 +56,7 @@ const References = ({
                 )}
                 {nav === 'references' && load && (
                     <div
-                        key="unique24873"
+                        id="reference2"
                         onClick={() => setLoad(false)}
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, .5)',
@@ -65,10 +65,9 @@ const References = ({
                             borderWidth: 3,
                             borderStyle: 'solid',
                             position: 'absolute',
-                            right: '10%',
-                            top: '35%',
-                            //height: '70%',
-                            width: '35%',
+                            right: '5%',
+                            top: '20%',
+                            width: '40%',
                             borderRadius: 30,
                             padding: 20,
                         }}

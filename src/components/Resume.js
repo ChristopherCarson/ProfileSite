@@ -17,6 +17,7 @@ const Resume = ({
         >
             {nav === 'resume' && load && (
                 <div
+                    id={"resume"}
                     style={{
                         backgroundColor: 'rgba(0, 0, 0, .5)',
                         color: 'white',
@@ -24,10 +25,10 @@ const Resume = ({
                         borderWidth: 3,
                         borderStyle: 'solid',
                         position: 'absolute',
-                        left: '15%',
+                        left: window.innerWidth < 900 ? '0%' : '15%',
                         top: '10%',
                         height: '90%',
-                        width: '70%',
+                        width: window.innerWidth < 900 ? '100%' : '70%',
                         borderRadius: 30,
                         padding: 20,
                         overflowX: 'hidden'
@@ -37,20 +38,20 @@ const Resume = ({
                     <div className="row work">
                         <div className="three columns header-col">
                             <h1>
-                                <span className="resume glow">Work</span>
+                                <span className="glow">Work</span>
                             </h1>
                         </div>
 
                         <div className="nine columns main-col">
                             {data.work.map(work => (
                                 <div key={work.company}>
-                                    <h3 className="resume">{work.company}</h3>
+                                    <p style={{ fontSize: 20, marginBottom: -10 }}>{work.company}</p>
                                     <p className="info">
                                         {work.title}{' '}
                                         <span>&bull;</span>{' '}
                                         <em className="date">{work.years}</em>
                                     </p>
-                                    <p className="resume">{work.description}</p>
+                                    <p>{work.description}</p>
                                     <br></br>
                                 </div>
                             ))}
@@ -69,11 +70,11 @@ const Resume = ({
                                 <div className="twelve columns">
                                     {data.education.map(education => (
                                         <div key={education.school}>
-                                            <h3 className="resume">{education.school}</h3>
+                                            <p style={{ fontSize: 20, marginBottom: -10 }}>{education.school}</p>
                                             <p className="info">
                                                 {education.degree}
                                             </p>
-                                            <p className="resume">{education.description}</p>
+                                            <p>{education.description}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -89,7 +90,7 @@ const Resume = ({
                         </div>
 
                         <div className="nine columns main-col">
-                            <span className="resume">{data.skillmessage}</span>
+                            <span style={{ color: 'white' }}>{data.skillmessage}</span>
                         </div>
                     </div>
                 </div>
