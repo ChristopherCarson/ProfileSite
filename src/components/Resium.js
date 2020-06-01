@@ -106,7 +106,8 @@ const Resium = ({ data, globe, setGlobe }) => {
 
                 <ul id="nav" className="nav">
                     <li className={nav === 'home' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#home"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'home') setLoad(false);
@@ -115,10 +116,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Home
-                        </p>
+                        </a>
                     </li>
                     <li className={nav === 'about' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#about"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'about') setLoad(false);
@@ -127,10 +129,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             About
-                        </p>
+                        </a>
                     </li>
                     <li className={nav === 'resume' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#resume"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'resume') setLoad(false);
@@ -139,10 +142,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Resume
-                        </p>
+                        </a>
                     </li>
                     <li className={nav === 'works' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#works"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'works') setLoad(false);
@@ -151,10 +155,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Works
-                            </p>
+                            </a>
                     </li>
                     <li className={nav === 'references' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#references"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'references') setLoad(false);
@@ -163,10 +168,11 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             References
-                        </p>
+                        </a>
                     </li>
                     <li className={nav === 'contact' ? 'current' : 'none'}>
-                        <p
+                        <a
+                            href="#contact"
                             style={{ cursor: 'pointer' }}
                             onClick={() => {
                                 if (nav !== 'contact') setLoad(false);
@@ -175,7 +181,7 @@ const Resium = ({ data, globe, setGlobe }) => {
                             }}
                         >
                             Contact
-                        </p>
+                        </a>
                     </li>
                 </ul>
             </nav>

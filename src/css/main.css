@@ -632,7 +632,7 @@ input[type="checkbox"] {
 ul#nav li p:active {
     background-color: transparent !important;
 }
-ul#nav li.current p {
+ul#nav li.current a {
     color: #00f;
     font-weight: bold;
 }
@@ -760,7 +760,7 @@ ul#nav li {
     height: 48px;
     display: inline-block;
 }
-ul#nav li p {
+ul#nav li a {
     display: inline-block;
     padding: 8px 13px;
     line-height: 32px;

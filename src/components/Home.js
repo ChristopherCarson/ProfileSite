@@ -53,10 +53,10 @@ const Home = ({
                             backgroundColor: 'rgba(0, 0, 0, .75)',
                             color: 'white',
                             position: 'absolute',
-                            left: '15%',
-                            top: '10%',
-                            height: '80%',
-                            width: '70%',
+                            left: window.innerWidth < 900 ? '0%' : '15%',
+                            top: window.innerWidth < 900 ? '18%' : '10%',
+                            height: window.innerWidth < 900 ? '100%' : '80%',
+                            width: window.innerWidth < 900 ? '100%' : '70%',
                             borderRadius: 30,
                             padding: 20,
                             textAlign: 'center',
@@ -89,7 +89,7 @@ const Home = ({
                     scale: globe ? scale : 1.5,
                     rotate: globe ? rotate : 0
                 }}
-                transition={{ duration: 15 }}
+                transition={{ duration: 10 }}
             >
                 <img alt="" src="images/sat.png" />
             </motion.div >

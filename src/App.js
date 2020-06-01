@@ -41,7 +41,11 @@ const App = () => {
                     pointerEvents: 'none',
                     marginLeft: -100
                 }} >
-                    <img style={{ width: 100, opacity: 0, marginLeft: 48, marginTop: 15 }} alt="" src="images/skills/aws.png" />
+                    <img style={{
+                        width: window.innerWidth < 480 ? 50 : 100,
+                        opacity: 0, marginLeft: window.innerWidth < 480 ? 20 : 48,
+                        marginTop: 15
+                    }} alt="" src="images/skills/aws.png" />
                     <img style={{ width: 200, opacity: 0, marginTop: 15 }} alt="" src="images/skills/cesium.png" />
                     <img style={{ width: 200, opacity: 0 }} alt="" src="images/skills/react.png" />
                 </div>)}
