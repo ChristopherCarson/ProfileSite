@@ -205,7 +205,6 @@ const Resium = ({ data, globe, setGlobe }) => {
                 creditContainer={'newCredit'}
             >
                 <div style={{
-                    //backgroundColor: 'orange',
                     width: '28%',
                     height: '100%',
                     position: 'absolute',
@@ -222,7 +221,6 @@ const Resium = ({ data, globe, setGlobe }) => {
                     />)}
                 </div>
                 <div style={{
-                    //backgroundColor: 'red',
                     width: '45%',
                     height: '100%',
                     position: 'absolute',
@@ -239,7 +237,6 @@ const Resium = ({ data, globe, setGlobe }) => {
                     />)}
                 </div>
                 <div style={{
-                    //backgroundColor: 'yellow',
                     width: '28%',
                     height: '100%',
                     position: 'absolute',
@@ -282,7 +279,6 @@ const Resium = ({ data, globe, setGlobe }) => {
                     <Entity
                         position={Cartesian3.fromDegrees(-120, 38)}
                         point={{ pixelSize: 15, color: Color.BLUE }}
-                    //onClick={() => setLoad(true)}
                     ></Entity>
                 )}
                 {nav === 'resume' && (
@@ -357,18 +353,6 @@ const Resium = ({ data, globe, setGlobe }) => {
                     data={data.main}
                 />
             </Viewer>
-
-            {/** 
-                <div className={"mediaInfo"} style={{
-                    width: 100,
-                    height: 20,
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    pointerEvents: 'none'
-                }}></div>
-                */}
-
         </div>
     );
 };
